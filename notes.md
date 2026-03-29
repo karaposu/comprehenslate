@@ -301,3 +301,9 @@ On "mazi is the mirror of istikbal" (past mirrors future):
 The text states that the past is a mirror for the future — inventions that will come are built on foundations laid in the past. Applied to translation and textual analysis: understanding how a text was understood in the past provides templates for how it will be understood in the future. Comprehenslate should use historical interpretations as predictive models for future interpretive possibilities, treating the history of a text's reception as data about its latent meanings.
 On the comprehensive nature of the human being as "nüsha-i câmi'a" (comprehensive copy):
 The text describes the human as a "comprehensive copy" of the entire universe — containing samples of every realm, equipped with inner and outer senses of unlimited depth, especially the fathomless conscience (vicdan). This is why Adam could name everything — his comprehensive nature gave him access to all knowledge simultaneously. For Comprehenslate, this establishes that the ideal interpreter is one whose comprehension is similarly comprehensive — able to hold multiple domains, multiple layers, and multiple perspectives simultaneously, which is exactly what the tool is designed to do.
+
+
+
+Extra Notes Layer Added:
+
+On terms that are dimensionally compressed beyond target-language capacity" — when a source-language term simultaneously encodes register, relational status, functional role, and hierarchical position in a way no single target-language term can replicate, the translator must use a decompression strategy: render the most contextually critical dimension in a natural target-language term, then preserve the full original through transliteration with parenthetical context. The hybrid form on first mention establishes the term; subsequent mentions can use the shortened target-language form because the reader now carries the full package mentally
