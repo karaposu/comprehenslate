@@ -1,9 +1,0 @@
-README.md
-pyproject.toml
-comprehenslate/__init__.py
-comprehenslate/config.py
-comprehenslate.egg-info/PKG-INFO
-comprehenslate.egg-info/SOURCES.txt
-comprehenslate.egg-info/dependency_links.txt
-comprehenslate.egg-info/requires.txt
-comprehenslate.egg-info/top_level.txt

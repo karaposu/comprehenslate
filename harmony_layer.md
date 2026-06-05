@@ -24,11 +24,11 @@ Choosing between synonyms to create phonetic harmony in the target language. Adj
 
 
 
-Not all harmony components carry equal weight, and pretending they do will either paralyze the translator (trying to preserve everything) or produce bad translations (sacrificing meaning for a phonetic echo that nobody needed).
+Not all harmony components carry equal weight. Some are meaning in disguise — losing them changes what the text communicates. Others are pure surface, sacrificeable without semantic loss. Most depend on what the source text is doing with the feature: register-as-style is sacrificeable; register-as-structural-device is not.
 
-The ranking principle should be: the closer a harmony component is to carrying meaning, the higher its priority. The closer it is to pure aesthetic surface, the more freely it can be sacrificed.
+Each entry below carries its own judgment. Tier 1 and Tier 2 entries state "X — because [reason]" (preserve-leaning by their stated reason). Tier 3 entries state "X — PRESERVE when [scope condition]; SACRIFICE when [scope condition]" (context-dependent; the scope conditions decide). Tier 4 entries state "X — [reason for sacrificeability]" (sacrifice-leaning by their stated reason).
 
-Let me restructure the entire list into a tiered priority system:
+The tier groupings (1–4) sort by approximate weight: Tier 1 is nearly always preserve-leaning; Tier 4 is nearly always sacrifice-leaning. Within each tier, the entries' own clauses carry the actual judgment, not the tier label. A Tier 3 entry whose PRESERVE-WHEN clause fires for the specific source can carry effectively Tier 1 weight for that translation.
 
 Tier 1 — Non-Negotiable (meaning IS carried by this harmony)
 
@@ -100,33 +100,33 @@ Addressee consistency — because who is being spoken to affects how the reader 
 
 
 
-Tier 3 — Medium Priority (enhances reception quality)
+Tier 3 — Context-Dependent Priority
 
-These make the translation feel natural and readable in the target language. They serve comprehension comfort, not meaning. Preserve when you can, sacrifice without guilt when Tiers 1 or 2 need the space.
+These features can carry meaning when source uses them as structural devices, and can be sacrificed when source uses them incidentally or when target language requires adjustment. Each entry's PRESERVE-WHEN / SACRIFICE-WHEN clauses identify which condition applies for the specific translation.
 
-Register consistency — important for reader comfort but doesn't change meaning. A shift from formal to casual feels jarring but doesn't alter what's communicated.
+Register consistency — PRESERVE when source uses register alternation as a structural device (e.g., plain folk diction grounding elevated theology; verse vs. prose marking emotional altitude; class-coded speech alternation). SACRIFICE when source is register-uniform and target language requires register adjustment for naturalness.
 
-Synonym chaining — variety within unity is aesthetically pleasing and prevents monotony, but repeating the same word doesn't lose meaning.
+Synonym chaining — PRESERVE when source's repetition of the same word is deliberate (theological emphasis on a divine name; ritual cadence; ring-composition's exact echo binding distant passages). SACRIFICE when source's repetition is incidental and target reader expects synonymic variety to avoid monotony.
 
-Isotopy — the sustained underlying theme creates richness but its absence doesn't create confusion.
+Isotopy — PRESERVE when source uses sustained thematic field as a structural device (theme-shift marks section transition; theme-density marks emphasis). SACRIFICE when the thematic field is local and substitutable without altering the argument.
 
-Callback and forward-reference — long-range echoes reward attentive readers but their absence doesn't harm basic comprehension.
+Callback and forward-reference — PRESERVE when source's long-range echoes carry argument (ring composition; deliberate verbal recurrence binding distant passages; end-of-section recalling section-start). SACRIFICE when echoes are incidental and target reader is unlikely to detect them across the distance.
 
-Direct/indirect speech alternation — the rhythm of narration vs. quotation creates texture but doesn't carry argument.
+Direct/indirect speech alternation — PRESERVE when source's mode-shifts mark emotional thresholds, evidentiary status, or rhetorical pivots (iltifat in Quranic Arabic; free-indirect discourse in novels; intra-narrative quotation marking authority). SACRIFICE when mode-shift is a target-language convention substitution with no rhetorical loss.
 
-Performative continuity — whether all sentences warn or alternate between warning and describing is a pacing choice more than a meaning choice.
+Performative continuity — PRESERVE when source's alternation between performative modes (warning/describing/exhorting/declaring) is structural (sermon form; legal text's directive/descriptive interplay; oratorical buildup). SACRIFICE when the alternation is pacing-incidental and target form expects uniform mode.
 
-Strophic patterning — regular block sizes create visual rhythm but this is presentation, not content.
+Strophic patterning — PRESERVE when source's regular block-size carries meaning (ode form; sonnet structure; ghazal couplets; psalm verses; deliberate stanzaic argument). SACRIFICE when block-size is a typographical convention with no semantic load.
 
-Parallel panel structure — two passages mirroring each other element-by-element is architecturally beautiful but the meaning of each panel survives independently.
+Parallel panel structure — PRESERVE when source's parallelism IS the unit of meaning (Hebrew Bible *parallelismus membrorum* where parallel structure carries semantic equivalence; ancient Near Eastern couplet poetry; deliberate paired-statement argument). SACRIFICE when parallelism is decorative and target language can convey the same meaning without it.
 
-Density matching — preventing acceleration/braking in information density serves reader comfort, not meaning.
+Density matching — PRESERVE when source's density shifts carry rhetorical force (rapid for emphasis or urgency; slow for solemnity or weight; abrupt for shock). SACRIFICE when density is incidental and target reader's comprehension benefits from regularized pace.
 
-Merismus — complementary parts implying totality can usually be preserved through word choice without structural cost.
+Merismus — PRESERVE when source's complementary-parts-implying-totality is theologically or rhetorically load-bearing (Hebrew Bible "heaven and earth" as totality-claim; legal formulations binding scope). SACRIFICE when merismus is idiomatic and target language has a single word for the totality.
 
-Particle threading — repeated grammatical landmarks help orientation but target languages have their own orientation systems.
+Particle threading — PRESERVE when source's repeated particles carry argument structure (Arabic لا...لا negation chains; Greek μέν...δέ contrast-particles; source-language grammatical landmarks the reader uses to track logical flow). SACRIFICE when target language has its own orientation system that conveys the same logical structure differently.
 
-Sentence length rhythm — the tempo pattern serves aesthetic experience. It can usually be approximated but exact preservation isn't critical.
+Sentence length rhythm — PRESERVE when source's tempo carries meaning (legal text's terseness; poetic expansion; deliberate short-then-long for emphasis or weight). SACRIFICE when tempo is incidental aesthetic experience and target reader expects different sentence-length norms.
 
 
 
@@ -162,4 +162,4 @@ Formulaic echoes — source language formulas rarely have exact target language 
 
 How the system works in practice:
 
-When the translator encounters a conflict — preserving harmony component X would require compromising harmony component Y — they check the tiers. Higher tier always wins. When two components in the same tier conflict, the translator uses judgment and documents the choice in the harmony report.
+When two harmony components conflict — preserving X requires compromising Y — the translator consults the entries' own clauses. A Tier 1 entry trumps a Tier 4 entry. For Tier 3 entries, the PRESERVE-WHEN / SACRIFICE-WHEN conditions decide: a Tier 3 entry whose PRESERVE-WHEN clause fires for the specific source carries effectively Tier 1 weight for that translation; a Tier 3 entry whose SACRIFICE-WHEN clause fires carries effectively Tier 4 weight. When two components at effectively-equal weight conflict, the translator uses judgment and documents the choice in the harmony report.
