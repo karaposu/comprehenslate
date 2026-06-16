@@ -1,11 +1,11 @@
 ---
 name: comprehenslate
-description: AI-assisted translation of source documents (especially Said Nursi's Risale-i Nur and other theological / layered religious-philosophical texts). Invoke when the user asks to translate a document.
+description: AI-assisted translation of any source document into a target language. Invoke when the user asks to translate a document.
 ---
 
 # Comprehenslate — Translation Skill
 
-This skill produces an AI-assisted translation of a source document into a target language, parameterized by a structured `TranslationConfig`. It is calibrated for theological / layered religious-philosophical prose (especially Said Nursi's *Risale-i Nur*) but works for any source document.
+Comprehenslate is a general-purpose translation skill: it produces an AI-assisted translation of any source document into a target language, parameterized by a structured `TranslationConfig`. It is currently calibrated against theological / layered religious-philosophical prose (especially Said Nursi's *Risale-i Nur*) as its initial corpus, but is designed for any document — treat the calibration corpus as a tuning anchor, not the product's scope.
 
 The translation output is always **Markdown**.
 

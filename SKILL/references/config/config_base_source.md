@@ -21,6 +21,8 @@ The 8 axes:
 
 **Conservative-bias-for-reader-axes = LOWER default level.** For A1, A2, A3, when in doubt assume LESS reader competence — defaulting to a lower level produces a more accessible translation; the user dials UP if the actual reader is more advanced. (The opposite direction holds for strategy-side axes A5/A6/A7 where conservative-bias = preserve more.)
 
+**Calibration corpus, not scope.** Said Nursi's *Risale-i Nur* is used as a recurring illustrative corpus throughout this document because it is the project's tuning anchor (per `SKILL.md`). The 8 axes, the per-level definitions, and the calibration logic apply to **any source document** — religious texts are one set of illustrations among many, not the product's scope. Where a section gives a Risale-i Nur example alongside cross-cultural examples, treat them as a balanced pair: the axis itself is domain-neutral; the Nursi material happens to be the corpus the project has analyzed in most depth. Per the SKILL.md rule: *"treat the calibration corpus as a tuning anchor, not the product's scope."*
+
 ---
 
 ## A1 — reader_level
@@ -795,7 +797,7 @@ Discourse-register tier: only journalistic-level register about the domain (a Ne
 Domain-handling: PARAPHRASE-IN-LAYMAN-TERMS for any non-ubiquitous technical term; FOOTNOTE only for terms whose source-language form is load-bearing. AVOID-SPECIALIST-DEBATES entirely; UNATTRIBUTED-CONSENSUS for any view the source invokes.
 
 Examples across domains:
-- *Islamic theology (Said Nursi)*: doesn't reliably know "Allah" is the standard Arabic word for God; may think "Muhammad" might be a generic name. References to "tafsīr" → PARAPHRASE as "interpretive commentary." References to "Bediuzzaman" → INLINE-GLOSS as "Bediuzzaman (Said Nursi's honorific)" or FOOTNOTE. References to "ism-i azam" → KEEP-SOURCE-TERM-WITH-GLOSS ("the greatest name of God").
+- *Islamic theology*: doesn't reliably know "Allah" is the standard Arabic word for God; may think "Muhammad" might be a generic name. References to "tafsīr" → PARAPHRASE as "interpretive commentary." References to "Bediuzzaman" (Said Nursi's honorific) → INLINE-GLOSS or FOOTNOTE. References to "ism-i azam" → KEEP-SOURCE-TERM-WITH-GLOSS ("the greatest name of God").
 - *Biblical scholarship*: knows there's an Old Testament and New Testament; may not know what "Torah" means specifically (PARAPHRASE as "the first five books of the Bible"). References to "the Documentary Hypothesis" → FOOTNOTE.
 - *Theoretical physics*: knows physics studies "matter and energy"; doesn't know what "quantum" means precisely. References to "Schrödinger equation" → FOOTNOTE.
 - *Legal scholarship*: knows there are courts and lawyers; doesn't know "tort" or "common law" precisely. References to "stare decisis" → PARAPHRASE as "the principle that courts follow precedent."
@@ -1041,7 +1043,7 @@ Boundary distinguishing from `heritage`: the `source-native` reader has BORN-AND
 | 1st-generation immigrant (emigrated as adult) | `source-native` | Primary identity still source; immigration didn't shift cultural identity |
 | Heritage-but-no-practice reader | `heritage` | Inherited identity even without active practice |
 
-**Said Nursi audience spectrum mapping (project's primary corpus):**
+**Audience spectrum example (illustrated with Risale-i Nur, the project's calibration corpus):**
 
 - Western secular reader → `outsider` (default)
 - Western reader with general "world religions" exposure → `acquainted`
@@ -1075,9 +1077,9 @@ Three independent tests confirm categorical:
 
 **Per-axis default mappings:** A1 advanced; A2 educated; A3 any (often outsider-with-study); A5 foreignized; A6 standard; A7 rich; A8 deep.
 
-**Said Nursi anchor.** A scholar researching Said Nursi's place in Naqshbandi-Khalidi Sufi theology; a graduate student writing on Nursi's epistemology.
+**Risale-i Nur example.** A scholar researching Said Nursi's place in Naqshbandi-Khalidi Sufi theology; a graduate student writing on Nursi's epistemology.
 
-**Cross-cultural illustration.** A graduate student writing on the Documentary Hypothesis (Hebrew biblical scholarly); an academic studying Husserl's phenomenology (philosophy scholarly); a Norton Critical Edition of Plato.
+**Other examples.** A graduate student writing on the Documentary Hypothesis (Hebrew biblical scholarly); an academic studying Husserl's phenomenology (philosophy scholarly); a Norton Critical Edition of Plato.
 
 #### `devotional`
 
@@ -1087,9 +1089,9 @@ Three independent tests confirm categorical:
 
 **Per-axis default mappings:** A1 conversational; A2 aware-to-educated; A3 source-native / heritage; A5 foreignized-max; A6 standard; A7 standard; A8 standard.
 
-**Said Nursi anchor.** A Risale-i Nur reader doing daily spiritual reading; a dersane study circle.
+**Risale-i Nur example.** A Risale-i Nur reader doing daily spiritual reading; a dersane study circle.
 
-**Cross-cultural illustration.** A daily prayer reading from the Quran in translation; a Christian using the Bible for lectio divina; a Hindu reading the Gita for meditation.
+**Other examples.** A daily prayer reading from the Quran in translation; a Christian using the Bible for lectio divina; a Hindu reading the Gita for meditation.
 
 #### `casual`
 
@@ -1099,9 +1101,9 @@ Three independent tests confirm categorical:
 
 **Per-axis default mappings:** A1 daily; A2 lay-to-aware; A3 outsider-to-acquainted; A5 balanced; A6 light; A7 rich; A8 surface.
 
-**Said Nursi anchor.** A general curious reader exploring Risale-i Nur; a non-Muslim with interest in Islamic theology; a convert reading for general orientation.
+**Risale-i Nur example.** A general curious reader exploring Risale-i Nur; a non-Muslim with interest in Islamic theology; a convert reading for general orientation.
 
-**Cross-cultural illustration.** A Penguin Classics reader of Plato; a general reader of a literary novel in translation; a curious reader of an introductory Quran translation.
+**Other examples.** A Penguin Classics reader of Plato; a general reader of a literary novel in translation; a curious reader of an introductory Quran translation.
 
 #### `language-learning`
 
@@ -1111,9 +1113,9 @@ Three independent tests confirm categorical:
 
 **Per-axis default mappings:** A1 conversational (matched to learner); A2 lay; A3 outsider; A5 foreignized; A6 standard; A7 scholarly; A8 scholarly.
 
-**Said Nursi anchor.** A Turkish learner using Nursi as reading material; an advanced student of Ottoman Turkish; an Arabic-students reading Nursi's Quran-citations.
+**Risale-i Nur example.** A Turkish learner using Nursi as reading material; an advanced student of Ottoman Turkish; an Arabic-students reading Nursi's Quran-citations.
 
-**Cross-cultural illustration.** A Latin student reading Cicero with parallel text; a Greek student reading Plato with vocabulary glosses; a Sanskrit student reading the Gita with grammar notes.
+**Other examples.** A Latin student reading Cicero with parallel text; a Greek student reading Plato with vocabulary glosses; a Sanskrit student reading the Gita with grammar notes.
 
 #### `performance`
 
@@ -1123,9 +1125,9 @@ Three independent tests confirm categorical:
 
 **Per-axis default mappings:** A1 conversational; A2 any; A3 any; A5 balanced; A6 maximum; A7 minimal; A8 surface (or `none` for pure oral).
 
-**Said Nursi anchor.** Nursi recitation passages (some are designed for oral delivery); a sermon-translation drawing on Nursi.
+**Risale-i Nur example.** Nursi recitation passages (some are designed for oral delivery); a sermon-translation drawing on Nursi.
 
-**Cross-cultural illustration.** Quran recitation in translation (some translations are designed for recitation); a Greek tragedy in staged English; an opera surtitle translation; a poetry slam translation.
+**Other examples.** Quran recitation in translation (some translations are designed for recitation); a Greek tragedy in staged English; an opera surtitle translation; a poetry slam translation.
 
 ---
 
@@ -1149,9 +1151,9 @@ Three independent tests confirm categorical:
 
 **Cross-axis interaction.** A4 default match: `devotional`. A6 orthogonality: typically pairs with high A6 (preserve nazm + structural form) but doesn't require it — a `foreignized-max` lexical stance can coexist with low A6 form preservation (rare but possible — preserve foreign vocabulary while flattening rhythm).
 
-**Said Nursi anchor.** Risale-i Nur devotional reading for source-culture-fluent reader (A3=source-native). All Sufi honorifics + theological terms preserved; Sufi practice references untranslated; reader brings the cultural fluency.
+**Risale-i Nur example.** Risale-i Nur devotional reading for source-culture-fluent reader (A3=source-native). All Sufi honorifics + theological terms preserved; Sufi practice references untranslated; reader brings the cultural fluency.
 
-**Cross-cultural example.** Quran recitation translation; SBL Greek NT scholar-edition; Tanakh Jewish Publication Society edition.
+**Other examples.** Quran recitation translation; SBL Greek NT scholar-edition; Tanakh Jewish Publication Society edition.
 
 #### `foreignized`
 
@@ -1161,9 +1163,9 @@ Three independent tests confirm categorical:
 
 **Cross-axis interaction.** A4 default match: `scholarly` and `language-learning`. A6 orthogonality: typically pairs with high A6 for scholarly use but independent.
 
-**Said Nursi anchor.** Academic Islamic-studies edition of Risale-i Nur with footnotes. Nursi-specific terminology kept; Sufi context briefly explained where reader benefits.
+**Risale-i Nur example.** Academic Islamic-studies edition of Risale-i Nur with footnotes. Nursi-specific terminology kept; Sufi context briefly explained where reader benefits.
 
-**Cross-cultural example.** Norton Critical Edition of Plato; NRSV biblical edition; M.A.S. Abdel Haleem Quran translation with light apparatus.
+**Other examples.** Norton Critical Edition of Plato; NRSV biblical edition; M.A.S. Abdel Haleem Quran translation with light apparatus.
 
 #### `balanced`
 
@@ -1173,9 +1175,9 @@ Three independent tests confirm categorical:
 
 **Cross-axis interaction.** A4 default match: `casual` and `performance`. A6 orthogonality: typically pairs with moderate A6 form but independent — performance pairs `balanced` A5 with MAXIMUM A6 (cadence preservation).
 
-**Said Nursi anchor.** Penguin-Classics-style edition for general curious reader. Nursi terms glossed in-line on first use; Sufi assumptions briefly framed; reader can follow.
+**Risale-i Nur example.** Penguin-Classics-style edition for general curious reader. Nursi terms glossed in-line on first use; Sufi assumptions briefly framed; reader can follow.
 
-**Cross-cultural example.** Penguin Classics edition of Plato; NIV biblical edition; Penguin Quran (e.g., Tarif Khalidi translation).
+**Other examples.** Penguin Classics edition of Plato; NIV biblical edition; Penguin Quran (e.g., Tarif Khalidi translation).
 
 #### `lightly-domesticated`
 
@@ -1185,9 +1187,9 @@ Three independent tests confirm categorical:
 
 **Cross-axis interaction.** A4 default match: no purpose defaults to `lightly-domesticated` in the matrix (the closest is `casual` defaulting to `balanced`). User would set A5 = `lightly-domesticated` as a per-axis override when more accessibility is wanted than `balanced` provides.
 
-**Said Nursi anchor.** A popular paperback edition of Risale-i Nur for the broadest possible general audience — convert exploring Islam casually; non-Muslim curious reader. Less central Sufi honorifics may be anglicized; cultural assumptions more heavily explicated; load-bearing terms (Allah, Quran, key theological concepts) preserved with light gloss.
+**Risale-i Nur example.** A popular paperback edition of Risale-i Nur for the broadest possible general audience — convert exploring Islam casually; non-Muslim curious reader. Less central Sufi honorifics may be anglicized; cultural assumptions more heavily explicated; load-bearing terms (Allah, Quran, key theological concepts) preserved with light gloss.
 
-**Cross-cultural example.** A trade-paperback edition of a classical text for mass-market reading; popular Penguin "Gateway" series introductory editions.
+**Other examples.** A trade-paperback edition of a classical text for mass-market reading; popular Penguin "Gateway" series introductory editions.
 
 **A5 → A1 cultural-reference-recognition action modulation table:**
 
@@ -1254,7 +1256,7 @@ The pattern across both tables: DOMESTICATE / TARGET-LANGUAGE-EQUIVALENT / ANGLI
 
 **Cross-axis interaction.** No A4 purpose defaults to `off` — this level requires explicit user override. A5 orthogonal (any value).
 
-**Said Nursi anchor.** Internal AI utility pass; semantic extraction for indexing; rough draft for editorial review.
+**Risale-i Nur example.** Internal AI utility pass; semantic extraction for indexing; rough draft for editorial review.
 
 #### `minimal`
 
@@ -1266,7 +1268,7 @@ The pattern across both tables: DOMESTICATE / TARGET-LANGUAGE-EQUIVALENT / ANGLI
 
 **Cross-axis interaction.** No A4 purpose defaults to `minimal` — explicit user override (e.g., utility translation that needs argument-structure preservation without aesthetic harmony).
 
-**Said Nursi anchor.** Said Nursi's istilzam chain "Rahman → Rezzak → Rızk → Beka → Vücud → İlim/İrade/Kudret → Hayat" — Tier 1 preservation is critical for the argument structure even when no other harmony work is performed. The cause-effect chain itself carries the theology; sacrifice it and the argument vanishes.
+**Risale-i Nur example.** Said Nursi's istilzam chain "Rahman → Rezzak → Rızk → Beka → Vücud → İlim/İrade/Kudret → Hayat" — Tier 1 preservation is critical for the argument structure even when no other harmony work is performed. The cause-effect chain itself carries the theology; sacrifice it and the argument vanishes.
 
 #### `light` (ACTIVATION GATE)
 
@@ -1278,7 +1280,7 @@ The pattern across both tables: DOMESTICATE / TARGET-LANGUAGE-EQUIVALENT / ANGLI
 
 **Cross-axis interaction.** A4 purpose default match: `casual` (per A4 matrix's "moderate"). A4 silent → `light` via chain.
 
-**Said Nursi anchor.** Casual edition of Risale-i Nur for general curious reader. The text's parallelism, ring composition, and chiastic structures are preserved (Tier 2); the meaning-bearing istilzam chains, emotional arcs, and tense shifts are preserved (Tier 1); the register-alternation conditionality (Tier 3) and phonetic echoes (Tier 4) are sacrificed.
+**Risale-i Nur example.** Casual edition of Risale-i Nur for general curious reader. The text's parallelism, ring composition, and chiastic structures are preserved (Tier 2); the meaning-bearing istilzam chains, emotional arcs, and tense shifts are preserved (Tier 1); the register-alternation conditionality (Tier 3) and phonetic echoes (Tier 4) are sacrificed.
 
 #### `standard`
 
@@ -1290,7 +1292,7 @@ The pattern across both tables: DOMESTICATE / TARGET-LANGUAGE-EQUIVALENT / ANGLI
 
 **Cross-axis interaction.** A4 purpose defaults: `scholarly`, `devotional`, `language-learning` (per A4 matrix's "high").
 
-**Said Nursi anchor.** Scholarly/devotional edition of Risale-i Nur. Register alternation (Tier 3 PRESERVE-WHEN: "source uses register alternation as a structural device" — fires for Nursi per the user's stored register-fidelity memory). Synonym chaining (Tier 3 PRESERVE-WHEN: deliberate theological emphasis on divine names — Nursi's repeated names of God in chains) — preserved. Callback and forward-reference (Tier 3 PRESERVE-WHEN: source's long-range echoes carry argument) — preserved. Sentence-length rhythm (Tier 3 PRESERVE-WHEN: source's tempo carries meaning) — preserved when Nursi's tempo is meaning-bearing.
+**Risale-i Nur example.** Scholarly/devotional edition of Risale-i Nur. Register alternation (Tier 3 PRESERVE-WHEN: "source uses register alternation as a structural device" — fires for Nursi per the user's stored register-fidelity memory). Synonym chaining (Tier 3 PRESERVE-WHEN: deliberate theological emphasis on divine names — Nursi's repeated names of God in chains) — preserved. Callback and forward-reference (Tier 3 PRESERVE-WHEN: source's long-range echoes carry argument) — preserved. Sentence-length rhythm (Tier 3 PRESERVE-WHEN: source's tempo carries meaning) — preserved when Nursi's tempo is meaning-bearing.
 
 #### `maximum`
 
@@ -1302,7 +1304,7 @@ The pattern across both tables: DOMESTICATE / TARGET-LANGUAGE-EQUIVALENT / ANGLI
 
 **Cross-axis interaction.** A4 purpose default: `performance` (per A4 matrix's "MAXIMUM"). Rhythm = meaning per harmony_layer commitment. A5 orthogonal — `maximum` form can coexist with any A5 stance: `foreignized-max` + `maximum` = scholarly devotional Quran-recitation; `lightly-domesticated` + `maximum` = poetic translation that mirrors source rhythm in target's natural poetic vocabulary.
 
-**Said Nursi anchor.** Performance/recitation edition of Risale-i Nur. Phonetic harmony attempted where Turkish-English target permits; cadence matched where possible; maqta' harmony explored; root echo acknowledged as "source-language-specific, no equivalent" in harmony report where the source's Arabic/Turkish root play cannot transfer.
+**Risale-i Nur example.** Performance/recitation edition of Risale-i Nur. Phonetic harmony attempted where Turkish-English target permits; cadence matched where possible; maqta' harmony explored; root echo acknowledged as "source-language-specific, no equivalent" in harmony report where the source's Arabic/Turkish root play cannot transfer.
 
 **Tier 3 runtime determination example.** For each Tier 3 entry at A6 `standard`+, the AI examines the source:
 
@@ -1359,7 +1361,7 @@ The harmony report is the documentation channel where the translator-AI flags Ti
 
 **Cross-axis note.** A4 default for `performance` (oral recitation; clean text). A5/A6 orthogonal. A7=off + foreignization-preferring A5 forces budget-FREE foreignization-preserving alternatives (EXPLICATE-FUNCTION over INLINE-GLOSS); harmony report at A6 Levels 3+ flags the trade-off.
 
-**Said Nursi anchor.** An oral-recitation passage of Risale-i Nur for live audience delivery — clean text only, no apparatus.
+**Risale-i Nur example.** An oral-recitation passage of Risale-i Nur for live audience delivery — clean text only, no apparatus.
 
 **Edition-tradition exemplar.** A utility translation; oral interpretation; road sign; UN-style summary translation.
 
@@ -1375,7 +1377,7 @@ The harmony report is the documentation channel where the translator-AI flags Ti
 
 **Cross-axis note.** No A4 purpose defaults here in the matrix (reserved for edge cases). A5 typically foreignized or balanced. A6 typically off or minimal.
 
-**Said Nursi anchor.** A pop-translation general-audience Risale-i Nur paperback — sparse footnotes only for the hardest Sufi/kalam terms; first-use transliteration gloss.
+**Risale-i Nur example.** A pop-translation general-audience Risale-i Nur paperback — sparse footnotes only for the hardest Sufi/kalam terms; first-use transliteration gloss.
 
 **Edition-tradition exemplar.** Penguin Classics paperback; NIV pew Bible (no study apparatus).
 
@@ -1391,7 +1393,7 @@ The harmony report is the documentation channel where the translator-AI flags Ti
 
 **Cross-axis note.** A4 default for `devotional` (A4 matrix's "moderate"). A5 typically balanced. A6 typically light to standard. Orthogonal to A6's harmony report channel.
 
-**Said Nursi anchor.** A standard scholarly Risale-i Nur edition — moderate footnotes; inline glosses for Sufi/kalam terms on first use; inline parenthetical for major polysemous concepts.
+**Risale-i Nur example.** A standard scholarly Risale-i Nur edition — moderate footnotes; inline glosses for Sufi/kalam terms on first use; inline parenthetical for major polysemous concepts.
 
 **Edition-tradition exemplar.** NIV Study Bible; Loeb Classical Library bilingual edition with apparatus on facing page.
 
@@ -1407,7 +1409,7 @@ The harmony report is the documentation channel where the translator-AI flags Ti
 
 **Cross-axis note.** A4 default for `scholarly` AND `casual` (A4 matrix's "rich (help unfamiliar)" for casual — also chain default when A7 is silent). A5 anywhere from foreignized to lightly-domesticated. A6 anywhere from minimal to standard.
 
-**Said Nursi anchor.** A Norton-Critical-style Risale-i Nur edition — extensive footnotes per page, inline glosses, light appendix material, inline parentheticals for polysemy.
+**Risale-i Nur example.** A Norton-Critical-style Risale-i Nur edition — extensive footnotes per page, inline glosses, light appendix material, inline parentheticals for polysemy.
 
 **Edition-tradition exemplar.** Norton Critical Edition; Oxford World's Classics with critical introduction and notes.
 
@@ -1423,7 +1425,7 @@ The harmony report is the documentation channel where the translator-AI flags Ti
 
 **Cross-axis note.** A4 default for `language-learning` (A4 matrix's "MAX rich"). A5 typically foreignized. A6 typically standard to maximum.
 
-**Said Nursi anchor.** A full scholarly apparatus Risale-i Nur edition — extensive footnotes, endnotes, scholarly introduction, glossary of Sufi/kalam terms, appendix, critical apparatus, exegetical history for major polysemous concepts like `din`, `nur`, `iman`.
+**Risale-i Nur example.** A full scholarly apparatus Risale-i Nur edition — extensive footnotes, endnotes, scholarly introduction, glossary of Sufi/kalam terms, appendix, critical apparatus, exegetical history for major polysemous concepts like `din`, `nur`, `iman`.
 
 **Edition-tradition exemplar.** SBL Greek NT critical apparatus edition; Robert Alter scholarly Hebrew Bible translation with apparatus; Brill critical edition.
 
@@ -1491,7 +1493,7 @@ Dual-tier is necessary because A8's A4 matrix casual default `surface` is operat
 
 **Cross-axis note.** A4 default for `performance` (oral recitation; zero apparatus) and in some configurations for `casual` (when paired with A7=off for utility translation). A5/A6/A7 orthogonal. **A7=off + A8=none = maximally-clean pure-translation configuration** (oral recitation use case).
 
-**Said Nursi anchor.** An oral recitation passage of Risale-i Nur delivered live; pure translation only, no apparatus.
+**Risale-i Nur example.** An oral recitation passage of Risale-i Nur delivered live; pure translation only, no apparatus.
 
 **Edition-tradition exemplar.** A utility translation (road sign / quick UN-style summary / oral interpretation) with no apparatus.
 
@@ -1509,7 +1511,7 @@ Dual-tier is necessary because A8's A4 matrix casual default `surface` is operat
 
 **Cross-axis note.** A4 default for `casual` (per A4 matrix) and `performance` (when slight context needed). A5 typically domesticated or balanced. A6 typically off or minimal.
 
-**Said Nursi anchor.** Pop-translation Risale-i Nur paperback; brief publisher's note; 2-page glossary of the most-needed Sufi/kalam terms only.
+**Risale-i Nur example.** Pop-translation Risale-i Nur paperback; brief publisher's note; 2-page glossary of the most-needed Sufi/kalam terms only.
 
 **Edition-tradition exemplar.** Penguin Classics paperback (no analysis chapter; minimal front matter).
 
@@ -1527,7 +1529,7 @@ Dual-tier is necessary because A8's A4 matrix casual default `surface` is operat
 
 **Cross-axis note.** A4 default for `devotional` (per A4 matrix). A5 typically balanced. A6 typically light to standard.
 
-**Said Nursi anchor.** Standard scholarly Risale-i Nur edition; brief introduction; glossary of major Sufi/kalam terms; cross-references to other Words/Letters; brief footnotes on key polysemous concepts (`din`, `nur`, `iman`).
+**Risale-i Nur example.** Standard scholarly Risale-i Nur edition; brief introduction; glossary of major Sufi/kalam terms; cross-references to other Words/Letters; brief footnotes on key polysemous concepts (`din`, `nur`, `iman`).
 
 **Edition-tradition exemplar.** Oxford World's Classics with brief introduction + select notes; Loeb Classical Library with introduction.
 
@@ -1545,7 +1547,7 @@ Dual-tier is necessary because A8's A4 matrix casual default `surface` is operat
 
 **Cross-axis note.** A4 default for `scholarly` (per A4 matrix). A5 typically foreignized or balanced. A6 typically standard to maximum.
 
-**Said Nursi anchor.** Norton-Critical-style Risale-i Nur edition; scholarly introduction; analysis chapter per major Word/Letter; extensive cross-references; exegetical-history paragraphs for key concepts (`din`, `nur`, `iman`, `nefs`); rhetorical analysis of nazm; target-language-equivalent justification for major translation choices; theological commentary; historical-critical context.
+**Risale-i Nur example.** Norton-Critical-style Risale-i Nur edition; scholarly introduction; analysis chapter per major Word/Letter; extensive cross-references; exegetical-history paragraphs for key concepts (`din`, `nur`, `iman`, `nefs`); rhetorical analysis of nazm; target-language-equivalent justification for major translation choices; theological commentary; historical-critical context.
 
 **Edition-tradition exemplar.** Norton Critical Edition (translation + extensive analysis chapter + criticism collection).
 
@@ -1563,7 +1565,7 @@ Dual-tier is necessary because A8's A4 matrix casual default `surface` is operat
 
 **Cross-axis note.** A4 default for `language-learning` (per A4 matrix; refinement resolves prior `deep+scholarly` ambiguity to `scholarly`). A5 typically foreignized. A6 typically standard to maximum.
 
-**Said Nursi anchor.** Full critical apparatus Risale-i Nur edition; comprehensive introduction (Said Nursi's life, intellectual context, Risale-i Nur project history); exhaustive glossary; etymology of every key term; rhetorical analysis per passage; exhaustive cross-references; full exegetical history per polysemous concept; lexical-history of target-language equivalents; full target-language-equivalent analysis; extensive theological commentary; full historical-critical apparatus; philological apparatus (manuscript variants if available); cross-tradition references (other Sufi/kalam authors).
+**Risale-i Nur example.** Full critical apparatus Risale-i Nur edition; comprehensive introduction (Said Nursi's life, intellectual context, Risale-i Nur project history); exhaustive glossary; etymology of every key term; rhetorical analysis per passage; exhaustive cross-references; full exegetical history per polysemous concept; lexical-history of target-language equivalents; full target-language-equivalent analysis; extensive theological commentary; full historical-critical apparatus; philological apparatus (manuscript variants if available); cross-tradition references (other Sufi/kalam authors).
 
 **Edition-tradition exemplar.** SBL Greek NT critical apparatus edition; Robert Alter scholarly Hebrew Bible translation with apparatus; Brill critical edition; Cambridge Companion + Critical Edition.
 

@@ -1,0 +1,39 @@
+# State: swiftui_v0_keychain_and_subtask_enumeration
+
+## Flow-type
+articulated-surfacing-routed
+
+## Pipeline
+A → Su → S → D → I → C → R (always)
+
+## Progress
+- [x] Articulate-Simple
+- [x] Surfacing
+- [x] Sensemaking
+- [x] Decomposition
+- [x] Innovation
+- [x] Critique
+- [x] Routelister
+
+## Iteration
+1
+
+## Status
+COMPLETE
+
+## Next Discipline
+—
+
+## Relationships
+- CONTINUES FROM: devdocs/inquiries/2026-06-15_16-48__comprehenslate_mac_app_design/ (the v0 phasing recommendation refined here was produced as conversation context downstream of that inquiry's Mac-app commitment)
+- RELATED: devdocs/inquiries/2026-06-15_19-17__user_research_persona_validation/ (sibling inquiry on the same Mac-app commitment, but on persona-validation axis rather than tech-stack subtask axis)
+
+## History
+- 2026-06-15_20-50: Created. Question: dive deep into the v0 SwiftUI phasing — Item I1: is Keychain required (or is the real question where-to-save the API key); Item I2: enumerate the SwiftUI subtasks. Articulation: HIGH-PROCEED (Itemize count = 2; flagged: none). Synthesis Trigger: 1 prior (Mac-app finding) + in-conversation v0 phasing substrate. Cross-item coupling noted: I1's verdict gates I2's MQ4 exclusion of Keychain from v0 subtasks.
+- 2026-06-15_20-59: Surfacing complete. Hybrid mode (possibility for I1 / artifact for I2). 16 regions; 199 items + 7 concept-names. Distribution: ~55 core / ~95 sub / ~35 side / ~14 umbrella. Frontier flags: 5 (F1 Settings-scene-in-v0?; F2 KeyStore-protocol-in-v0?; F3 cross-platform-secret-store [out-of-scope]; F4 TouchID-Keychain-gate; F5 sandboxed-or-not). 9 failure modes checked: 8 NONE; 1 PARTIAL (Over-coverage at 199 items — accepted per lean-to-include; Sensemaking will prune to decision-bearing subsets). Verdict: PROCEED.
+- 2026-06-15_21-06: Sensemaking complete. 6 SVs; substantial SV1→SV6 delta. 7 ambiguities collapsed (5 HIGH + 1 MEDIUM + 1 HIGH); 6 failure modes NONE fired. SV6 commits: (I1) 5×4 Storage Strategy Decision Matrix + phase-dependent recommendation + KeyStore protocol introduced in v0 + UserDefaults default backing + paste-each-session alternative impl; (I2) file-level build-checklist in 4 stages (Xcode-setup / File-creation / Wiring / Run-and-test); F1 NO-Settings-in-v0; F2 YES-KeyStore-in-v0; F5 YES-sandbox-in-v0; v0 timeline 2-3 days achievable. Inherited Commitments Re-test: 5-layer architecture + Mac-native CONFIRMED; Project-as-data-model / 3-tier triage / 10 features / reading typography all DEFERRED-per-phase (intentional); BYO key REFINED at v0 (synthesis-flag AE1 noted, not blocking v0). Verdict: PROCEED.
+- 2026-06-15_21-10: Decomposition complete. 10 pieces (P1 Methodology / P2 Decision Matrix / P3 Per-Phase Rec / P4 KeyStore Code / P5 Env Setup / P6 File Creation / P7 Wiring / P8 Run-and-Test / P9 Inherited Re-test / P10 Phase Roadmap); 13 interfaces + 5 surfaced assumptions; 6-level dependency DAG with L0 (P1, P9) → L1 (P2) → L2 (P3) → L3 parallel (P4, P5, P10) → L4 (P6) → L5 (P7) → L6 (P8). 7 self-eval dimensions PASS. Determination-mechanism check PASS (phase / threat-model / KeyStore-impl-active all determined extra-runtime). Top-down + bottom-up agree on all 10 boundaries (HIGH CONFIDENCE). 7 failure modes: 6 NONE; 1 BORDERLINE (Over-decomposition at 10 pieces — accepted because each maps to distinct deliverable section). Verdict: PROCEED.
+- 2026-06-15_21-30: Innovation complete. Production-task mode (Standard default; alternative Contrarian-rethink declined — Sensemaking SV6 already adjudicated). All 10 PCs ACTIONABLE. 5 meta-decision pieces (P1, P2, P3, P9, P10) each generated Inversion-candidate; all REJECTED or REFINED (P10 partial absorption). P4 produced ~80 lines Swift 5.9/macOS 14+ KeyStore code (untested-by-compile; flagged). P5-P8 produced 45 file-level subtasks (close to sensemaking-estimated 50-60). P2 produced full 5×4 Decision Matrix with concrete per-cell content. P10 produced 5-phase roadmap with explicit "suggested-not-binding" reframe. 3 emergents surfaced: E1 KeyStore-as-transition-primitive (enables all phase transitions mechanically); E2 sandbox-on-day-1 broader than Ambiguity 6 reasoned (covers all v0.5+ filesystem features); E3 v0.5→v1 boundary is the AE1/AE2-adjudication gate (real research required before v1). Inherited Frame Audit: NOT FIRED (all 5 meta-decision pieces had Inversion-candidates). Full coverage telemetry: 4G+3F; convergence YES; failure modes NONE. Verdict: PROCEED.
+- 2026-06-15_21-36: Critique complete. 14 dimensions (6 default + 8 user-stated focus areas). 6 clean SURVIVE (P1, P5, P6, P8, P9, P10) + 2 SURVIVE-with-CAVEAT (P4, E1, E2) + 4 REFINE (P2, P3, P7, E3) + 0 KILL. Substance-axis prosecution surfaced real factual/syntactic errors: P2 sandboxed UserDefaults plist path WRONG (`~/Library/Preferences/<bundle>.plist` stated but should be `~/Library/Containers/<bundle>/Data/Library/Preferences/<bundle>.plist` for v0 sandboxed app); P3 migration mis-located in KeyStore.init (App-layer concern); P3 threat-model "no distribution scaffold" is intent-not-structural (personal-team-signed .app CAN run on friend's Mac with Gatekeeper override); P7 Bindable inline syntax wrong (`text: Bindable(keyStore).apiKey` gives String not Binding<String>; needs `@Bindable var bindableKeyStore = keyStore` then `$bindableKeyStore.apiKey`); P7 missing ClaudeClient.shared instantiation step; E3 imprecise language (v1 is first distribution phase, not "v0.5→v1 boundary" specifically); P4 minor @Observable didSet-at-init verification needed. Adversarial strength: STRONG. 9 failure modes: 8 NONE + 1 PARTIAL (External-Grounding Absence — Mechanism-Independence Quarantine applied; reader must compile + cross-ref Apple docs). META-finding A3: untested-by-compile code is recurring synthesis risk source. Verdict: PROCEED / TERMINATE with 4 REFINEs applied at finding-write-time.
+- 2026-06-15_21-40: Routelister complete (exhaust step). Root/breadth mode; fresh entry. 16 identities enumerated. High-priority: 3 (R1 build v0; R2 verify-by-compile/Mechanism-Independence-Quarantine; R5 conduct real translator research before v1 distribution commit). Routes by kind: 9 teleological + 7 epistemic. Frontier flags: 2 (R5 user research lead-time; R16 cross-platform OOS until scoped). All 6 LAYER 1 + all 4 LAYER 2 failure modes checked — NONE fired. Both routelister.md + _route.md written. Verdict: PROCEED. ITERATION COMPLETE: 4-axis Decision Matrix + KeyStore protocol code + 45 file-level subtasks + 9-row Inherited Re-test + 5-phase Roadmap + 3 emergents (E1/E2/E3) produced; Critique REFINEs identified for finding-write-time application; ready for CONCLUDE.
+- 2026-06-15_21-46: CONCLUDE complete. finding.md written with all 4 Critique REFINEs applied: (a) P2 matrix cell for UserDefaults corrected to sandboxed plist path (`~/Library/Containers/<bundle>/Data/Library/Preferences/<bundle>.plist`); (b) P3 migration mechanism relocated from KeyStore.init to App-layer + threat-model language refined to "intent + practical friction" (not "structural impossibility"); (c) P7 Bindable inline syntax corrected to local `@Bindable var bindableKeyStore = keyStore` then `$bindableKeyStore.apiKey` pattern; (d) E3 reframed as "v1 is the first distribution phase" (not "v0.5→v1 boundary"). 2 CAVEATs noted in MUST/Open Questions: @Observable didSet-at-init verification; v3/v4 hardware-token speculation is fertility. Mechanism-Independence Quarantine surfaced as MUST item (verify-by-compile at first integration). META-finding A3 (untested-by-compile recurring synthesis risk) surfaced in COULD + Research Frontiers. 6 discipline files (articulate_simple/surfacing/sensemaking/decomposition/innovation/critique) archived to docarchive/. routelister.md + _route.md kept in inquiry root per articulated-surfacing-routed convention. Status: COMPLETE.

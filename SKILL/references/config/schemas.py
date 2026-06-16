@@ -70,10 +70,13 @@ class ArchaicRegisterPolicy(BaseModel):
 
 
 class HonorificsPolicy(BaseModel):
-    """How to render theological honorifics that follow names.
+    """How to render deferential or relational honorifics that follow
+    (or precede) names.
 
-    Edge case: Islamic SAW/AS/RA/PBUH family; Jewish ZT"L/RA/OBM family;
-    Hindu śrī and analogous conventions in other traditions.
+    Edge case: religious honorifics (Islamic SAW/AS/RA/PBUH family;
+    Jewish ZT"L/RA/OBM family; Hindu śrī); academic/professional suffixes
+    (PhD, Esq., Dr.); military rank suffixes; royal styles; and analogous
+    conventions across any tradition or institution.
     """
     policy: Literal[
         "preserve-original-script",
@@ -85,11 +88,15 @@ class HonorificsPolicy(BaseModel):
 
 
 class FormulaicOpeningPolicy(BaseModel):
-    """How to render formulaic openings (invocations, basmala, dedicatory
-    formulae).
+    """How to render formulaic openings (invocations, dedicatory formulae,
+    ritual openings, conventional preambles) that open major sections of
+    a composed text.
 
-    Edge case: Islamic Bismillah; Jewish Shema; Christian invocations;
-    Vedic mantras and similar dedicatory formulae.
+    Edge case: religious invocations (Islamic Bismillah; Jewish Shema;
+    Christian invocations; Vedic mantras); legal preambles ("Whereas...";
+    "Be it enacted..."); academic-paper dedications; epistle openings;
+    military citations; and analogous conventions across any tradition
+    or genre.
     """
     policy: Literal[
         "preserve-original-with-translation",

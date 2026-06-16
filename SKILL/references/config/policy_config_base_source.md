@@ -1,8 +1,10 @@
 # Comprehenslate Policy Layer — LLM Calibration Context
 
-This document is the prompt context the translator-AI reads to interpret Policy-class instances from `schemas.py`. Each Policy-class section makes the **full spectrum** of `Literal[N]` values visible so a single chosen value (e.g. `HonorificsPolicy.policy = "translate-meaning"`) calibrates against its neighbors. Per-value definitions distinguish each value from the ones immediately adjacent on the preserve↔replace spectrum, with concrete Said Nursi anchors and cross-cultural examples wherever applicable.
+This document is the prompt context the translator-AI reads to interpret Policy-class instances from `schemas.py`. Each Policy-class section makes the **full spectrum** of `Literal[N]` values visible so a single chosen value (e.g. `HonorificsPolicy.policy = "translate-meaning"`) calibrates against its neighbors. Per-value definitions distinguish each value from the ones immediately adjacent on the preserve↔replace spectrum, with concrete examples drawn from the Risale-i Nur calibration corpus and from other traditions where applicable.
 
 **Companion to `config_base_source.md`.** That document calibrates the 8 axes of `TranslationConfig` (TC) — the user's broad strategy choices. This document calibrates the **Policy layer** — per-edge-case `Literal[N]` enums for recurring authorial value judgments. `PipelineConfig` (PC) — runtime engine knobs — is calibrated separately at integration time.
+
+**Calibration corpus, not scope.** Said Nursi's *Risale-i Nur* is used as a recurring illustrative corpus throughout this document because it is the project's tuning anchor (per `SKILL.md`). The Policy classes govern recurring authorial edge-cases in **any composed text** — religious-text examples (Quranic citations, hashiye, basmala, theological honorifics) are illustrations of those edge-cases, not the boundary of the policies' applicability. The same Policy classes apply to academic prose with embedded foreign-language quotes, legal documents with marginal annotations, literary works with author footnotes, or any text where the authorial edge-cases appear. Per the SKILL.md rule: *"treat the calibration corpus as a tuning anchor, not the product's scope."*
 
 The 7 Policy classes adopted in `schemas.py`:
 
@@ -12,7 +14,7 @@ The 7 Policy classes adopted in `schemas.py`:
 | 2 | SourceApparatusPolicy | Author's pre-existing apparatus (marginalia, glosses, hashiye) | 4 | `translate-as-footnote` |
 | 3 | VoiceMarkingPolicy | Transitions between author voice and cited / student voices | 5 | `as-in-original` |
 | 4 | ArchaicRegisterPolicy | Archaic source-language **register** (old vocabulary, syntax, idiom feel) | 4 | `hybrid-by-register-domain` |
-| 5 | HonorificsPolicy | Theological honorifics that follow names | 5 | `transliterate-with-original` |
+| 5 | HonorificsPolicy | Deferential / relational honorifics that follow names | 5 | `transliterate-with-original` |
 | 6 | FormulaicOpeningPolicy | Formulaic openings (invocations, basmala, dedicatory formulae) | 4 | `preserve-original-with-translation` |
 | 7 | EmbeddedPoetryPolicy | Embedded poetry, distinct from prose embedded language | 4 | `preserve-original-with-prose-gloss` |
 
@@ -76,9 +78,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Keep the non-main-language content verbatim with no translation or note. Maximum source-fidelity; assumes reader recognizes (or accepts not understanding) the embedded language.
 
-**Said Nursi anchor.** Nursi's Arabic-script Quranic citations preserved unchanged in the English edition — the reader encounters the Arabic glyphs as Nursi placed them, with no English rendering.
+**Risale-i Nur example.** Nursi's Arabic-script Quranic citations preserved unchanged in the English edition — the reader encounters the Arabic glyphs as Nursi placed them, with no English rendering.
 
-**Cross-cultural example.** Quran-edition that preserves the Arabic ayah without translation, assuming reader recitation/recognition; in-tradition Hebrew prayer books that preserve Hebrew without English translation alongside.
+**Other examples.** Quran-edition that preserves the Arabic ayah without translation, assuming reader recitation/recognition; in-tradition Hebrew prayer books that preserve Hebrew without English translation alongside.
 
 **Suits.** Editions for source-culture-fluent readers; in-tradition devotional or scholarly editions where the embedded language IS the meaning.
 
@@ -86,9 +88,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Preserve the non-main-language original verbatim AND provide translation as a note (footnote, endnote, or inline note). The default — combines maximum source-fidelity with accessibility.
 
-**Said Nursi anchor.** Nursi's Arabic-script ayah preserved with an English translation as a footnote: *"بَلَىٰ مَن أَسْلَمَ وَجْهَهُ لِلَّهِ وَهُوَ مُحْسِنٌ — Yes, whoever submits their whole self to Allah and is a doer of good [Sura 2:112]"*
+**Risale-i Nur example.** Nursi's Arabic-script ayah preserved with an English translation as a footnote: *"بَلَىٰ مَن أَسْلَمَ وَجْهَهُ لِلَّهِ وَهُوَ مُحْسِنٌ — Yes, whoever submits their whole self to Allah and is a doer of good [Sura 2:112]"*
 
-**Cross-cultural example.** Norton Critical Editions of biblical texts with Hebrew/Greek preserved and English in apparatus; M.A.S. Abdel Haleem's Quran translation with Arabic facing-page and English translation.
+**Other examples.** Norton Critical Editions of biblical texts with Hebrew/Greek preserved and English in apparatus; M.A.S. Abdel Haleem's Quran translation with Arabic facing-page and English translation.
 
 **Suits.** Most general-purpose translations; scholarly and devotional editions alike.
 
@@ -96,9 +98,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Replace the non-main-language content with a target-language translation in the main text; the original is dropped from the main path. Accessibility-first.
 
-**Said Nursi anchor.** Nursi's Arabic ayah rendered only in English in main text: *"Yes, whoever submits their whole self to Allah and is a doer of good"* — the Arabic glyphs are not shown.
+**Risale-i Nur example.** Nursi's Arabic ayah rendered only in English in main text: *"Yes, whoever submits their whole self to Allah and is a doer of good"* — the Arabic glyphs are not shown.
 
-**Cross-cultural example.** Trade-paperback editions targeting non-specialist readers; popular Bible translations where Greek/Hebrew is not retained.
+**Other examples.** Trade-paperback editions targeting non-specialist readers; popular Bible translations where Greek/Hebrew is not retained.
 
 **Suits.** Casual reading editions; mass-market accessibility-focused translations.
 
@@ -106,9 +108,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Translation in main text; original preserved in a note. Inverse of `preserve-original-and-add-translation-as-a-note` — translation foregrounded, original archived for scholarly check.
 
-**Said Nursi anchor.** English ayah in main text; Arabic original in footnote with sura:ayah citation.
+**Risale-i Nur example.** English ayah in main text; Arabic original in footnote with sura:ayah citation.
 
-**Cross-cultural example.** Penguin Classics editions of biblical / Quranic texts where translation reads as primary and source-original is footnoted for verification.
+**Other examples.** Penguin Classics editions of biblical / Quranic texts where translation reads as primary and source-original is footnoted for verification.
 
 **Suits.** Reader-friendly editions that still respect source-original for scholarly check; teaching editions.
 
@@ -116,9 +118,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Use the **accepted famous translation** of the source rather than producing a new translation. "Infamous" here means "well-known / canonical," not pejorative — the established rendering the audience would recognize.
 
-**Said Nursi anchor.** A Quranic ayah rendered using Yusuf Ali's, Sahih International's, or Asad's existing English translation — recognizable to a reader who knows the Quran in English. Or, for a Nursi-specific phrase, using Şükran Vahide's established English rendering.
+**Risale-i Nur example.** A Quranic ayah rendered using Yusuf Ali's, Sahih International's, or Asad's existing English translation — recognizable to a reader who knows the Quran in English. Or, for a Nursi-specific phrase, using Şükran Vahide's established English rendering.
 
-**Cross-cultural example.** KJV English for Bible quotations in English-language scholarly works; Robert Alter for Hebrew Bible quotations where his rendering is canonical; Coleman Barks for Rumi where his rendering is canonical.
+**Other examples.** KJV English for Bible quotations in English-language scholarly works; Robert Alter for Hebrew Bible quotations where his rendering is canonical; Coleman Barks for Rumi where his rendering is canonical.
 
 **Suits.** Editions where the embedded text has an established public-recognition rendering and the translator wants to honor that rather than introduce a new one.
 
@@ -138,9 +140,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Discard the author's marginalia entirely.
 
-**Said Nursi anchor.** A casual paperback edition of Risale-i Nur omits the hashiye and presents only Nursi's main text.
+**Risale-i Nur example.** A casual paperback edition of Risale-i Nur omits the hashiye and presents only Nursi's main text.
 
-**Cross-cultural example.** Trade-paperback editions of classical texts that strip critical apparatus; popular Penguin editions of biblical books without footnotes.
+**Other examples.** Trade-paperback editions of classical texts that strip critical apparatus; popular Penguin editions of biblical books without footnotes.
 
 **Suits.** Mass-market accessibility-first editions; readers for whom the marginalia would create cognitive overhead without proportional gain.
 
@@ -148,9 +150,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Render marginalia inline in the target with bracket markers.
 
-**Said Nursi anchor.** Hashiye inserted into the translation flow as bracketed asides: *"...[Hashiye: this point applies also to the situation of the believer in adversity]..."*
+**Risale-i Nur example.** Hashiye inserted into the translation flow as bracketed asides: *"...[Hashiye: this point applies also to the situation of the believer in adversity]..."*
 
-**Cross-cultural example.** Penguin Classics with translator-inserted bracketed glosses; some Quran translations that bracket explanatory expansions inside the verse.
+**Other examples.** Penguin Classics with translator-inserted bracketed glosses; some Quran translations that bracket explanatory expansions inside the verse.
 
 **Suits.** Editions where the marginalia is short, contextually-relevant, and adds value without breaking reading flow.
 
@@ -158,9 +160,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Render marginalia as target-language footnotes. The default.
 
-**Said Nursi anchor.** The hashiye become numbered footnotes in the English edition, preserving the author's voice as a distinct annotation layer without interrupting the main text.
+**Risale-i Nur example.** The hashiye become numbered footnotes in the English edition, preserving the author's voice as a distinct annotation layer without interrupting the main text.
 
-**Cross-cultural example.** Norton Critical Edition style; scholarly editions of biblical commentaries; M.A.S. Abdel Haleem's Quran translation with footnoted explanations.
+**Other examples.** Norton Critical Edition style; scholarly editions of biblical commentaries; M.A.S. Abdel Haleem's Quran translation with footnoted explanations.
 
 **Suits.** Most general-purpose editions; scholarly and devotional editions; preserves the author/marginalia distinction visibly.
 
@@ -168,9 +170,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Preserve marginalia as a structurally distinct channel — sidebar, parallel column, distinct font — mirroring the source's physical layout.
 
-**Said Nursi anchor.** The hashiye appear in a sidebar or smaller font running parallel to Nursi's main text, mirroring the source manuscript's layout.
+**Risale-i Nur example.** The hashiye appear in a sidebar or smaller font running parallel to Nursi's main text, mirroring the source manuscript's layout.
 
-**Cross-cultural example.** Talmud Bavli editions where main text and commentaries occupy distinct columns; sacred-text editions with patristic commentary in parallel apparatus; medieval manuscript facsimile editions.
+**Other examples.** Talmud Bavli editions where main text and commentaries occupy distinct columns; sacred-text editions with patristic commentary in parallel apparatus; medieval manuscript facsimile editions.
 
 **Suits.** Scholarly editions; manuscript-tradition-conscious editions; readers expected to engage the marginalia as a parallel reading channel rather than as footnoted secondary content.
 
@@ -192,9 +194,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** No marking at all. Author voice and citations blend into one flat narrative surface.
 
-**Said Nursi anchor.** The English translation flows continuously without typographic, attributional, or apparatus marking — a reader encounters Quran citations, hadith, and Nursi's own prose at the same surface level.
+**Risale-i Nur example.** The English translation flows continuously without typographic, attributional, or apparatus marking — a reader encounters Quran citations, hadith, and Nursi's own prose at the same surface level.
 
-**Cross-cultural example.** Vernacular translations targeting narrative flow where voice attribution would feel academic; popular religious paraphrases.
+**Other examples.** Vernacular translations targeting narrative flow where voice attribution would feel academic; popular religious paraphrases.
 
 **Suits.** Devotional reading where voice-distinction is not the reading purpose; mass-market accessibility.
 
@@ -202,9 +204,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Preserve the source's own voice-marking conventions in the target. The default. This is the source-preserving baseline that aligns with the other Policy classes' default-preserve patterns.
 
-**Said Nursi anchor.** Nursi uses Arabic script for ayahs and Latin script for his Turkish prose; the English target mirrors this visual contrast (Arabic-script ayahs preserved; hashiye indented as Nursi indented them).
+**Risale-i Nur example.** Nursi uses Arabic script for ayahs and Latin script for his Turkish prose; the English target mirrors this visual contrast (Arabic-script ayahs preserved; hashiye indented as Nursi indented them).
 
-**Cross-cultural example.** Tanakh translations that preserve the source's typographic distinction between narrative and poetry sections; red-letter Bibles that mark Jesus's speech as the source typeset it.
+**Other examples.** Tanakh translations that preserve the source's typographic distinction between narrative and poetry sections; red-letter Bibles that mark Jesus's speech as the source typeset it.
 
 **Suits.** Faithful editions where the source's own marking system carries meaning; devotional + scholarly editions alike.
 
@@ -212,9 +214,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Translator applies typographic conventions to mark voice transitions (italics for citations, indented blocks for marginalia, distinct fonts for embedded language).
 
-**Said Nursi anchor.** Quranic citations rendered in italic; hashiye indented and set in smaller type; Persian Mevlana couplets in a serif italic distinct from main type — typographic conventions chosen by the translator regardless of how Nursi marked them.
+**Risale-i Nur example.** Quranic citations rendered in italic; hashiye indented and set in smaller type; Persian Mevlana couplets in a serif italic distinct from main type — typographic conventions chosen by the translator regardless of how Nursi marked them.
 
-**Cross-cultural example.** Standard scholarly editions of cross-tradition theological texts; academic biblical commentaries; Oxford World's Classics.
+**Other examples.** Standard scholarly editions of cross-tradition theological texts; academic biblical commentaries; Oxford World's Classics.
 
 **Suits.** Editions where source-original typography would not be reproducible in English (script-change visual contrast doesn't transfer); standardized scholarly typography preferred.
 
@@ -222,9 +224,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Translator inserts explicit "as X says" attributions at voice transitions.
 
-**Said Nursi anchor.** *"As the Quran says in Sūrah 36:53..."* precedes each ayah; *"Said Nursi here notes in the margin..."* precedes each hashiye.
+**Risale-i Nur example.** *"As the Quran says in Sūrah 36:53..."* precedes each ayah; *"Said Nursi here notes in the margin..."* precedes each hashiye.
 
-**Cross-cultural example.** Critical editions with named-source inline attribution; teaching editions where every source-shift is explicitly tagged for the reader.
+**Other examples.** Critical editions with named-source inline attribution; teaching editions where every source-shift is explicitly tagged for the reader.
 
 **Suits.** Teaching editions; language-learning editions; readers who benefit from explicit voice-tracking.
 
@@ -232,9 +234,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Full apparatus with footnotes, sidebar attributions, source-marker sigla. Maximum voice-marking.
 
-**Said Nursi anchor.** Every voice transition produces an apparatus criticus entry; the reader sees footnoted citation references, sigla for hashiye-vs-main-text, and bibliographic anchors for each cited authority.
+**Risale-i Nur example.** Every voice transition produces an apparatus criticus entry; the reader sees footnoted citation references, sigla for hashiye-vs-main-text, and bibliographic anchors for each cited authority.
 
-**Cross-cultural example.** Norton Critical Editions; SBL Greek New Testament critical editions; Loeb Classical Library scholarly apparatus.
+**Other examples.** Norton Critical Editions; SBL Greek New Testament critical editions; Loeb Classical Library scholarly apparatus.
 
 **Suits.** Scholarly editions; critical editions; comparative-literature editions where voice-attribution is part of the study.
 
@@ -256,9 +258,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Keep the archaic register fully in the target throughout.
 
-**Said Nursi anchor.** Nursi's Ottoman-Turkish theological prose rendered in archaic English throughout: *"Verily, behold the believer who upon the path of certainty doth walk, who unto the divine names with assurance turneth..."*
+**Risale-i Nur example.** Nursi's Ottoman-Turkish theological prose rendered in archaic English throughout: *"Verily, behold the believer who upon the path of certainty doth walk, who unto the divine names with assurance turneth..."*
 
-**Cross-cultural example.** KJV Bible style for Hebrew/Aramaic source; Hakluyt Society editions of historical travel writing preserving period diction; Loeb's older English translations of Greek philosophy.
+**Other examples.** KJV Bible style for Hebrew/Aramaic source; Hakluyt Society editions of historical travel writing preserving period diction; Loeb's older English translations of Greek philosophy.
 
 **Suits.** Scholarly editions; historicizing translations where the period feel is part of the meaning; pastiche-aware editions.
 
@@ -266,9 +268,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Render everything in contemporary target language.
 
-**Said Nursi anchor.** The same passage in fully modern English: *"Truly, look at how the believer walks the path of certainty, turning with assurance to the divine names..."*
+**Risale-i Nur example.** The same passage in fully modern English: *"Truly, look at how the believer walks the path of certainty, turning with assurance to the divine names..."*
 
-**Cross-cultural example.** The Message paraphrase of the Bible; modern colloquial editions of Plato (Robin Waterfield translations); contemporary popular Sufi-poetry renderings (Coleman Barks-style Rumi).
+**Other examples.** The Message paraphrase of the Bible; modern colloquial editions of Plato (Robin Waterfield translations); contemporary popular Sufi-poetry renderings (Coleman Barks-style Rumi).
 
 **Suits.** Accessibility-first translations for general readers. Carries some no-smoothing-policy risk (smoothing of archaic forms violates faithful-rendering preservation).
 
@@ -276,9 +278,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Preserve archaic feel where it carries semantic weight; modernize where archaic English would be needlessly ornate. The default.
 
-**Said Nursi anchor.** Theological vocabulary (*iman*, *takvim*, *marifet*) keeps its weight in transliteration or archaic-register equivalent; Nursi's narrative analogies render in modern English without "thee/thou." Result: *"The believer (sahib-i iman) walks with certainty along the path, turning to the divine names with the assurance that comes from knowing them."*
+**Risale-i Nur example.** Theological vocabulary (*iman*, *takvim*, *marifet*) keeps its weight in transliteration or archaic-register equivalent; Nursi's narrative analogies render in modern English without "thee/thou." Result: *"The believer (sahib-i iman) walks with certainty along the path, turning to the divine names with the assurance that comes from knowing them."*
 
-**Cross-cultural example.** Penguin Classics of Plato — philosophical terminology preserved (eudaimonia, logos); narrative prose modernized. NRSV Bible style. Norton Critical editions that preserve period theological vocabulary while modernizing narrative.
+**Other examples.** Penguin Classics of Plato — philosophical terminology preserved (eudaimonia, logos); narrative prose modernized. NRSV Bible style. Norton Critical editions that preserve period theological vocabulary while modernizing narrative.
 
 **Suits.** The most general case — composes positively with the Layer-2 register-alternation preservation policy.
 
@@ -286,17 +288,17 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Use modern target language throughout but mark places where the source was archaic.
 
-**Said Nursi anchor.** Modern English throughout; Ottoman-Turkish theological vocabulary appears in italic + footnote: *"the believer's *iman*¹..."* with footnote glossing the term and noting its archaic-but-precise sense.
+**Risale-i Nur example.** Modern English throughout; Ottoman-Turkish theological vocabulary appears in italic + footnote: *"the believer's *iman*¹..."* with footnote glossing the term and noting its archaic-but-precise sense.
 
-**Cross-cultural example.** Language-learning editions; ALA-LC scholarly editions where archaisms are explicitly typographically marked; pedagogical critical editions for students.
+**Other examples.** Language-learning editions; ALA-LC scholarly editions where archaisms are explicitly typographically marked; pedagogical critical editions for students.
 
 **Suits.** Language-learning purposes; study-editions where the reader is expected to engage the archaism as data, not as register-feel.
 
 ---
 
-## 5. HonorificsPolicy — theological honorifics
+## 5. HonorificsPolicy — deferential / relational honorifics
 
-**Concept.** How to render theological honorifics that follow names — the Islamic *SAW / AS / RA / PBUH* family, the Jewish *ZT"L / RA / OBM* family, Hindu *śrī* before names, and analogous conventions across other traditions.
+**Concept.** How to render deferential or relational honorifics that follow (or precede) names — the Islamic *SAW / AS / RA / PBUH* family, the Jewish *ZT"L / RA / OBM* family, Hindu *śrī* before names, but also academic *PhD / Esq. / Dr.*, military rank suffixes, royal styles, and analogous conventions across any tradition or institution.
 
 **Edge case.** Theological texts routinely follow proper names with honorifics that carry devotional and religious weight. The translator decides how to render these: as source-script glyphs, as transliterated abbreviations, as fully translated meanings, as conventional English abbreviations, or dropped.
 
@@ -308,9 +310,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Keep the honorific in its original script.
 
-**Said Nursi anchor.** *"Resul-i Ekrem ﷺ buyurmuştur"* preserved with the Arabic ﷺ glyph after the Prophet's name; *"Hazret-i Ali (kerremallâhu vechehû)"* preserves the parenthesized Arabic honorific.
+**Risale-i Nur example.** *"Resul-i Ekrem ﷺ buyurmuştur"* preserved with the Arabic ﷺ glyph after the Prophet's name; *"Hazret-i Ali (kerremallâhu vechehû)"* preserves the parenthesized Arabic honorific.
 
-**Cross-cultural example.** Hebrew Bible editions preserving ז״ל / זצ״ל after rabbinic names; Sanskrit editions preserving devanagari śrī before names; East-Asian Buddhist editions preserving 仏 (bul/butsu) glyphs.
+**Other examples.** Hebrew Bible editions preserving ז״ל / זצ״ל after rabbinic names; Sanskrit editions preserving devanagari śrī before names; East-Asian Buddhist editions preserving 仏 (bul/butsu) glyphs.
 
 **Suits.** Editions for source-culture-fluent readers; in-tradition devotional texts; manuscript-faithful editions.
 
@@ -318,9 +320,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Transliterate the honorific in Latin script alongside the original. The default.
 
-**Said Nursi anchor.** *"The Prophet (sallallāhu ʿalayhi wa-sallam ﷺ)"* rendered with both Romanized transliteration and the original glyph.
+**Risale-i Nur example.** *"The Prophet (sallallāhu ʿalayhi wa-sallam ﷺ)"* rendered with both Romanized transliteration and the original glyph.
 
-**Cross-cultural example.** Encyclopedia of Islam style; scholarly Hindu studies editions that pair devanagari with transliterated honorifics; SBL biblical editions that show Hebrew + transliteration for proper-noun honorifics.
+**Other examples.** Encyclopedia of Islam style; scholarly Hindu studies editions that pair devanagari with transliterated honorifics; SBL biblical editions that show Hebrew + transliteration for proper-noun honorifics.
 
 **Suits.** Scholarly editions; bilingual study editions; readers comfortable with both scripts.
 
@@ -328,9 +330,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Render the honorific's meaning fully in the target language.
 
-**Said Nursi anchor.** *"The Prophet, peace and blessings be upon him"* — the full English meaning rendered after each Prophet reference.
+**Risale-i Nur example.** *"The Prophet, peace and blessings be upon him"* — the full English meaning rendered after each Prophet reference.
 
-**Cross-cultural example.** Most popular Islamic-history books for general audiences; Tarif Khalidi Quran translation style; popular Hindu texts that translate *śrī* as "blessed" or "revered."
+**Other examples.** Most popular Islamic-history books for general audiences; Tarif Khalidi Quran translation style; popular Hindu texts that translate *śrī* as "blessed" or "revered."
 
 **Suits.** General-reader editions; introductory non-academic texts; translations targeting readers without source-tradition fluency.
 
@@ -338,9 +340,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Use the established target-language abbreviation.
 
-**Said Nursi anchor.** *"The Prophet (PBUH)"* — using the conventional English abbreviation.
+**Risale-i Nur example.** *"The Prophet (PBUH)"* — using the conventional English abbreviation.
 
-**Cross-cultural example.** Mass-market Islamic-studies books; Western journalism on Islam; popular interfaith dialogue publications.
+**Other examples.** Mass-market Islamic-studies books; Western journalism on Islam; popular interfaith dialogue publications.
 
 **Suits.** Texts where compactness matters and readers recognize the abbreviation; popular religious-studies books.
 
@@ -348,9 +350,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Omit the honorific entirely.
 
-**Said Nursi anchor.** *"The Prophet said..."* — no honorific marking. Suits academic prose where editorial style mandates omission.
+**Risale-i Nur example.** *"The Prophet said..."* — no honorific marking. Suits academic prose where editorial style mandates omission.
 
-**Cross-cultural example.** Academic religious-studies monographs; Encyclopedia Britannica articles; secular comparative-religion textbooks.
+**Other examples.** Academic religious-studies monographs; Encyclopedia Britannica articles; secular comparative-religion textbooks.
 
 **Suits.** Academic neutral-voice editions; comparative-religion scholarship where preserving honorifics would imply confessional commitment.
 
@@ -358,9 +360,9 @@ The Policy layer composes with `TranslationConfig`:
 
 ## 6. FormulaicOpeningPolicy — formulaic openings
 
-**Concept.** How to render formulaic openings (invocations, basmala, dedicatory formulae) that open major sections of theological prose.
+**Concept.** How to render formulaic openings (invocations, dedicatory formulae, ritual openings, conventional preambles) that open major sections of a composed text.
 
-**Edge case.** Most theological treatises and devotional texts open with a formulaic invocation — the Islamic Bismillah; the Jewish Shema; Christian invocations; Vedic mantras. The translator decides whether to preserve original, transliterate, translate, or preserve untranslated.
+**Edge case.** Many texts — theological, ceremonial, legal, academic — open with a formulaic invocation or preamble: the Islamic Bismillah; the Jewish Shema; Christian invocations; Vedic mantras; legal preambles ("Whereas..."; "Be it enacted..."); academic-paper dedications; epistle openings ("Dear sir, I am pleased to..."); military citations. The translator decides whether to preserve original, transliterate, translate, or preserve untranslated.
 
 **Values:** `preserve-original-with-translation | transliterate-with-translation | translate-only | preserve-original-untranslated`
 
@@ -370,9 +372,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Keep the original formula plus translation. The default.
 
-**Said Nursi anchor.** *"بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ — In the name of Allah, the Most Compassionate, the Most Merciful"* opens each major section, with both the Arabic glyph block and the English meaning.
+**Risale-i Nur example.** *"بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ — In the name of Allah, the Most Compassionate, the Most Merciful"* opens each major section, with both the Arabic glyph block and the English meaning.
 
-**Cross-cultural example.** Tanakh editions that preserve Hebrew *Shema Yisrael* with English translation; Sanskrit editions preserving devanagari mantras with translation; Catholic missals preserving Latin formulae with vernacular.
+**Other examples.** Tanakh editions that preserve Hebrew *Shema Yisrael* with English translation; Sanskrit editions preserving devanagari mantras with translation; Catholic missals preserving Latin formulae with vernacular.
 
 **Suits.** General-purpose translations that respect liturgical/devotional weight while remaining accessible.
 
@@ -380,9 +382,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Transliterate in Latin script + translation.
 
-**Said Nursi anchor.** *"Bismillāhi r-raḥmāni r-raḥīm — In the name of Allah, the Most Compassionate, the Most Merciful"*
+**Risale-i Nur example.** *"Bismillāhi r-raḥmāni r-raḥīm — In the name of Allah, the Most Compassionate, the Most Merciful"*
 
-**Cross-cultural example.** Academic editions of liturgical texts; scholarly Vedic editions transliterating mantras; Reform Jewish prayer books pairing transliterated Hebrew with English.
+**Other examples.** Academic editions of liturgical texts; scholarly Vedic editions transliterating mantras; Reform Jewish prayer books pairing transliterated Hebrew with English.
 
 **Suits.** Scholarly editions where source-script reproduction is impractical; readers comfortable with transliteration but without source-script.
 
@@ -390,9 +392,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Render only the meaning in target language.
 
-**Said Nursi anchor.** *"In the name of Allah, the Most Compassionate, the Most Merciful"* — without the Arabic glyphs or transliteration.
+**Risale-i Nur example.** *"In the name of Allah, the Most Compassionate, the Most Merciful"* — without the Arabic glyphs or transliteration.
 
-**Cross-cultural example.** Popular English-language editions of religious texts targeting non-specialist readers; trade-paperback editions of Sufi poetry.
+**Other examples.** Popular English-language editions of religious texts targeting non-specialist readers; trade-paperback editions of Sufi poetry.
 
 **Suits.** Accessibility-first translations; readers without source-tradition familiarity.
 
@@ -400,9 +402,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Preserve the original formula with no translation.
 
-**Said Nursi anchor.** *"بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"* preserved as-is, untranslated, on the assumption that the reader recognizes the basmala by sight.
+**Risale-i Nur example.** *"بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ"* preserved as-is, untranslated, on the assumption that the reader recognizes the basmala by sight.
 
-**Cross-cultural example.** Editions targeting religiously-fluent readers; in-tradition prayer books; Hebrew prayer-book reprints assuming Shema-recognition.
+**Other examples.** Editions targeting religiously-fluent readers; in-tradition prayer books; Hebrew prayer-book reprints assuming Shema-recognition.
 
 **Suits.** In-tradition devotional editions; readers for whom the formula's recognition IS the rendering.
 
@@ -422,9 +424,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Preserve the original poetry; follow with a prose gloss in the target. The default.
 
-**Said Nursi anchor.** A Mevlana couplet preserved in Persian script, followed by an English prose paragraph explaining its meaning and how Nursi uses it: *"بشنو از نی چون حکایت می‌کند / از جدایی‌ها شکایت می‌کند — Listen to the reed as it tells its tale, complaining of separations. Nursi here invokes Mevlana's opening to anchor his point that..."*
+**Risale-i Nur example.** A Mevlana couplet preserved in Persian script, followed by an English prose paragraph explaining its meaning and how Nursi uses it: *"بشنو از نی چون حکایت می‌کند / از جدایی‌ها شکایت می‌کند — Listen to the reed as it tells its tale, complaining of separations. Nursi here invokes Mevlana's opening to anchor his point that..."*
 
-**Cross-cultural example.** Loeb Classical Library editions where Greek verse appears with English prose translation on the facing page; scholarly editions of Hebrew poetry in biblical commentaries; academic editions of Sanskrit ślokas with prose gloss.
+**Other examples.** Loeb Classical Library editions where Greek verse appears with English prose translation on the facing page; scholarly editions of Hebrew poetry in biblical commentaries; academic editions of Sanskrit ślokas with prose gloss.
 
 **Suits.** Most faithful default — preserves poetic identity while ensuring meaning transmits.
 
@@ -432,9 +434,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Render the embedded poetry as poetry in the target.
 
-**Said Nursi anchor.** Mevlana couplets rendered in English rhymed verse (or English free verse approximating the couplet structure): *"Listen as the reed laments / its tale of distance and lament."*
+**Risale-i Nur example.** Mevlana couplets rendered in English rhymed verse (or English free verse approximating the couplet structure): *"Listen as the reed laments / its tale of distance and lament."*
 
-**Cross-cultural example.** Coleman Barks's Rumi translations; Robert Alter's poetic translations of the Hebrew Bible; A.K. Ramanujan's poetic translations of South Indian devotional verse.
+**Other examples.** Coleman Barks's Rumi translations; Robert Alter's poetic translations of the Hebrew Bible; A.K. Ramanujan's poetic translations of South Indian devotional verse.
 
 **Suits.** Editions targeting readers for whom verse-form recognition is part of the experience; literary translations.
 
@@ -442,9 +444,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Render embedded poetry as prose in the target.
 
-**Said Nursi anchor.** A Mevlana couplet rendered as a paragraph of English prose, integrating into Nursi's surrounding text without verse markup: *"Listen to the reed as it tells of separations and complains."*
+**Risale-i Nur example.** A Mevlana couplet rendered as a paragraph of English prose, integrating into Nursi's surrounding text without verse markup: *"Listen to the reed as it tells of separations and complains."*
 
-**Cross-cultural example.** Penguin Classics editions that prose-translate verse for accessibility; trade-paperback translations of Iranian classical poetry; popular-edition Bible Psalms in prose paragraphs.
+**Other examples.** Penguin Classics editions that prose-translate verse for accessibility; trade-paperback translations of Iranian classical poetry; popular-edition Bible Psalms in prose paragraphs.
 
 **Suits.** Accessibility-first translations; reader unfamiliar with verse conventions; texts where the verse is illustrative not load-bearing.
 
@@ -452,9 +454,9 @@ The Policy layer composes with `TranslationConfig`:
 
 **Strategic stance.** Preserve original verse with target verse on facing page, with metrical notes.
 
-**Said Nursi anchor.** A bilingual edition with the Persian couplet on the verso and an English verse equivalent on the recto, plus a footnote on the original meter (*"hazaj-i muthamman maḥdhūf"*) and how the English approximates it.
+**Risale-i Nur example.** A bilingual edition with the Persian couplet on the verso and an English verse equivalent on the recto, plus a footnote on the original meter (*"hazaj-i muthamman maḥdhūf"*) and how the English approximates it.
 
-**Cross-cultural example.** Loeb Classical Library; bilingual editions of Pushkin; scholarly editions of Hafez; Penguin parallel-text editions of Dante.
+**Other examples.** Loeb Classical Library; bilingual editions of Pushkin; scholarly editions of Hafez; Penguin parallel-text editions of Dante.
 
 **Suits.** Scholarly editions; readers studying the poetic form itself; comparative-literature editions.
 
@@ -474,10 +476,10 @@ These four Policy classes were evaluated in the corrective inquiry and assessed 
 
 **Caveat.** Transliteration is partly translator-side (a render convention) rather than purely authorial. Filter 3 (authorial-edge-case category) is partial.
 
-- **`scholarly-standard`** — full diacritics per academic convention (ALA-LC, DIN-31635, IAST). *Nursi:* "Bedīʿuzzamān Saʿīd Nūrsī"; full Arabic diacritics. *Cross-cultural:* Encyclopedia of Islam; IAST-compliant Sanskrit.
-- **`popular-standard`** — established public-facing transliteration without full diacritics. *Nursi:* "Bediuzzaman Said Nursi"; "Quran"; "iman". *Cross-cultural:* trade-paperback editions; popular Islamic books.
-- **`phonetic`** — simplified-to-target-language phonetics for readability. *Nursi:* "Bediyuzzaman Said Noorsee". *Cross-cultural:* children's introductions to world religions.
-- **`diacritic-stripped`** — like scholarly but without diacritics; suits constrained typography. *Nursi:* "Bediuzzaman Said Nursi" without ī / ʿ. *Cross-cultural:* web editions; ASCII-only databases.
+- **`scholarly-standard`** — full diacritics per academic convention (ALA-LC, DIN-31635, IAST). *Risale-i Nur:* "Bedīʿuzzamān Saʿīd Nūrsī"; full Arabic diacritics. *Other:* Encyclopedia of Islam; IAST-compliant Sanskrit.
+- **`popular-standard`** — established public-facing transliteration without full diacritics. *Risale-i Nur:* "Bediuzzaman Said Nursi"; "Quran"; "iman". *Other:* trade-paperback editions; popular Islamic books.
+- **`phonetic`** — simplified-to-target-language phonetics for readability. *Risale-i Nur:* "Bediyuzzaman Said Noorsee". *Other:* children's introductions to world religions.
+- **`diacritic-stripped`** — like scholarly but without diacritics; suits constrained typography. *Risale-i Nur:* "Bediuzzaman Said Nursi" without ī / ʿ. *Other:* web editions; ASCII-only databases.
 
 ### B. PriorTranslationStancePolicy
 
@@ -489,11 +491,11 @@ These four Policy classes were evaluated in the corrective inquiry and assessed 
 
 **Caveat.** A `list[PriorRef]` companion structure (which translations are being honored / extended) would live separately, not on this Policy class — the class carries only the *stance* choice. Filter 1 (structural shape) is near-miss because companion data is needed.
 
-- **`independent`** — translate from scratch; treat priors as background reference only. *Nursi:* new translation that does not consult Vahide / Akarsu during drafting. *Cross-cultural:* Robert Alter's Hebrew Bible.
-- **`honor-terminology`** — preserve key terminology choices from accepted priors. *Nursi:* preserves Vahide's English of Nursi's key terms (*haqiqat* → "reality"). *Cross-cultural:* NIV's deference to KJV terminology where possible.
-- **`extend-with-revisions`** — build on a prior translation, revising where new scholarship demands. *Nursi:* revised edition of Vahide updating where subsequent scholarship has shifted readings. *Cross-cultural:* NRSV's relationship to RSV.
-- **`explicit-divergence-noted`** — independently translate but explicitly flag divergence from priors. *Nursi:* footnotes each significant divergence from Vahide / Akarsu. *Cross-cultural:* Robert Alter's footnoted KJV / RSV divergences.
-- **`collate-and-cite`** — present multiple prior renderings alongside the new translation. *Nursi:* critical edition presenting Vahide, Akarsu, and new translator side-by-side. *Cross-cultural:* variorum Shakespeare editions.
+- **`independent`** — translate from scratch; treat priors as background reference only. *Risale-i Nur:* new translation that does not consult Vahide / Akarsu during drafting. *Other:* Robert Alter's Hebrew Bible.
+- **`honor-terminology`** — preserve key terminology choices from accepted priors. *Risale-i Nur:* preserves Vahide's English of Nursi's key terms (*haqiqat* → "reality"). *Other:* NIV's deference to KJV terminology where possible.
+- **`extend-with-revisions`** — build on a prior translation, revising where new scholarship demands. *Risale-i Nur:* revised edition of Vahide updating where subsequent scholarship has shifted readings. *Other:* NRSV's relationship to RSV.
+- **`explicit-divergence-noted`** — independently translate but explicitly flag divergence from priors. *Risale-i Nur:* footnotes each significant divergence from Vahide / Akarsu. *Other:* Robert Alter's footnoted KJV / RSV divergences.
+- **`collate-and-cite`** — present multiple prior renderings alongside the new translation. *Risale-i Nur:* critical edition presenting Vahide, Akarsu, and new translator side-by-side. *Other:* variorum Shakespeare editions.
 
 ### C. AnachronismHandlingPolicy
 
@@ -507,10 +509,10 @@ These four Policy classes were evaluated in the corrective inquiry and assessed 
 
 Nursi-specific anachronism examples: **Şeyhülislam** (Ottoman state's highest Islamic religious authority, abolished 1924); **Darü'l-Hikmet'il-İslamiye** (Ottoman House of Islamic Wisdom where Nursi taught, dissolved with the caliphate); specific Ottoman vilayet names; **altın lira** (gold-backed Ottoman currency); specific Eastern Front WWI engagements.
 
-- **`preserve-with-footnote`** — keep the anachronism in the target; footnote it. *Nursi:* "Şeyhülislam" preserved + footnote on the abolished office. *Cross-cultural:* Penguin Classics of Renaissance texts preserving "Privy Council" with footnote.
-- **`inline-gloss`** — preserve with brief in-text gloss. *Nursi:* "...the Şeyhülislam (the Ottoman state's highest Islamic religious authority, an office since abolished)...". *Cross-cultural:* trade-paperback historical novels inline-glossing period offices.
-- **`modernize-equivalent`** — substitute a current-equivalent term. *Nursi:* "Şeyhülislam" rendered as "the Grand Mufti." Risk: loses state-administrative dimension. *Cross-cultural:* "centurion" → "captain."
-- **`drop-and-replace-current`** — drop and replace with current-day equivalent. *Nursi:* "Darü'l-Hikmet'il-İslamiye" → "a contemporary Islamic scholarly institution." *Cross-cultural:* The Message's biblical political references.
+- **`preserve-with-footnote`** — keep the anachronism in the target; footnote it. *Risale-i Nur:* "Şeyhülislam" preserved + footnote on the abolished office. *Other:* Penguin Classics of Renaissance texts preserving "Privy Council" with footnote.
+- **`inline-gloss`** — preserve with brief in-text gloss. *Risale-i Nur:* "...the Şeyhülislam (the Ottoman state's highest Islamic religious authority, an office since abolished)...". *Other:* trade-paperback historical novels inline-glossing period offices.
+- **`modernize-equivalent`** — substitute a current-equivalent term. *Risale-i Nur:* "Şeyhülislam" rendered as "the Grand Mufti." Risk: loses state-administrative dimension. *Other:* "centurion" → "captain."
+- **`drop-and-replace-current`** — drop and replace with current-day equivalent. *Risale-i Nur:* "Darü'l-Hikmet'il-İslamiye" → "a contemporary Islamic scholarly institution." *Other:* The Message's biblical political references.
 
 ### D. CitationReferenceFormatPolicy
 
@@ -522,10 +524,10 @@ Nursi-specific anachronism examples: **Şeyhülislam** (Ottoman state's highest 
 
 **Caveat.** Use-case is narrow (only matters for corpora with formal citation conventions). Filter check passes but adoption is gated on whether the project's corpora carry enough formal citation to warrant the field.
 
-- **`preserve-source-format`** — keep the source's own citation format. *Nursi:* "Yâsîn sûresi, 53. âyet" renders as "Yāsīn Surah, 53rd verse." *Cross-cultural:* Talmud's folio:line; Sanskrit's canto:śloka.
-- **`standardize-canonical`** — convert to standardized format. *Nursi:* Quranic citations rendered "Quran 36:53." *Cross-cultural:* SBL biblical citation format.
-- **`both-with-cross-reference`** — provide both. *Nursi:* "Yâsîn 53 (Quran 36:53)." *Cross-cultural:* bilingual scholarly editions.
-- **`footnoted-only`** — citations as footnote references rather than inline. *Nursi:* superscript footnote numbers; citation in footnotes. *Cross-cultural:* academic monographs.
+- **`preserve-source-format`** — keep the source's own citation format. *Risale-i Nur:* "Yâsîn sûresi, 53. âyet" renders as "Yāsīn Surah, 53rd verse." *Other:* Talmud's folio:line; Sanskrit's canto:śloka.
+- **`standardize-canonical`** — convert to standardized format. *Risale-i Nur:* Quranic citations rendered "Quran 36:53." *Other:* SBL biblical citation format.
+- **`both-with-cross-reference`** — provide both. *Risale-i Nur:* "Yâsîn 53 (Quran 36:53)." *Other:* bilingual scholarly editions.
+- **`footnoted-only`** — citations as footnote references rather than inline. *Risale-i Nur:* superscript footnote numbers; citation in footnotes. *Other:* academic monographs.
 
 ---
 
