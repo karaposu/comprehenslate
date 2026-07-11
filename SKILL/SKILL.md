@@ -72,9 +72,10 @@ Before producing the translation, send one short line:
 
 Then produce the translation. Apply:
 
-- The user's `TranslationConfig` choices (per `config_base_source.md` calibration).
+- The user's `TranslationConfig` choices (per `config_base_source.md` calibration). This matters because it effects what words are usable in the target language and which are not usable . 
 - Default Policy values from `schemas.py` (or the user's overrides if `with policies` was requested; per `policy_config_base_source.md` calibration).
-- The translation principles from `references/core/translation_principals.md` and `references/core/advanced_principles.md`.
+- Use The translation principles from `references/core/translation_principals.md` and `references/core/advanced_principles.md`. These are translation rule of thumbs for specific niche but important cases. If any souce material resembles any of these principles you should pay extra attention using translation. 
+
 - The harmony-layer Tier 1-4 preservation policy from `references/core/harmony_layer.md` (Tier 1-2 are NON-NEGOTIABLE hard constraints regardless of other config choices).
 - Any project notes from `references/core/notes.md`.
 

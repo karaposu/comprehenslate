@@ -1,8 +1,4 @@
-
-
-
-
- Harmony Preservation Layer:
+Harmony Preservation Layer:
 
 The idea is to create a translation mode that works in three passes:
 

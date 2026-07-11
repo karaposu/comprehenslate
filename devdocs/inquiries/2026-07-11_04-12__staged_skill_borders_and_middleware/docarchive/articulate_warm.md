@@ -1,0 +1,51 @@
+## User Input
+
+`_branch.md` + `surfacing.md` + `articulate_simple.md` (staged SKILL borders + middleware files; warm re-anchor pass). Conflict-detection note: surfacing found the STAGING half is already LATENT in the SKILL (harmony_layer.md line 7 "three passes", un-wired by Step 5's flat apply-bag), the harmony-vs-policies separation is partially present on disk but collapsed at Step 5, the MIDDLEWARE half has a latent seed (the harmony report), staging heavily OVERLAPS prior `2026-07-11_00-24` (DF5), and "still one run" makes textual borders SOFT (DF6). User's instinct likely RIGHT, form refined — same non-severe content-conflict shape as the prior inquiries.
+
+---
+
+## Warm Pass — item-1 (staged SKILL borders + per-change middleware files)
+
+### Step 1 — Consume (surfaced = information; cold MQ answers = constraints)
+Kept both. Cold constraints (deliverable = evaluate + gated design; one-run; structure-not-content; the two sub-proposals; the three flags) rule out wrong readings; surfaced material (latent 3-Pass, collapsed-at-Step-5 layers, harmony-report seed, redundancy-with-prior, soft-borders) supplies the concrete facets the re-anchor commits onto.
+
+### Step 2 — MQ2 re-anchor (the load-bearing move) — COMMITTED
+Cold MQ2 was open (which priors; runtime-vs-authoring target; honest-eval vs build). **Committed context-need:** the task bears on the **actual comprehenslate SKILL structure as surfacing revealed it** — where (a) the STAGING half is **already LATENT** (harmony_layer.md's 3-Pass: Meaning Lock → Harmony Map → Target Reconstruction) but **un-wired** by SKILL.md Step 5's flat "Apply:" bag; (b) the harmony-vs-policies **separation is partially present on disk** (`references/config/` vs `references/core/`) but **collapsed at Step 5**; (c) the MIDDLEWARE half has a **latent seed** (the "harmony report", harmony_layer lines 145/166) but no per-change artifact exists; (d) the staging half **heavily overlaps prior `2026-07-11_00-24`** (wire the 3-Pass into Step 5); (e) **"one run" makes borders SOFT** (a header doesn't enforce stage-freezing). The evaluation-and-design must run against THIS reality: the proposal is largely **"finish wiring what's already written as stages + restore the collapsed layer separation + add the genuinely-new middleware layer,"** NOT a from-scratch architecture. **Directional commitment:** the useful form is **REFINED** — (i) the staging half = *generalize the prior 3-Pass wiring to all layers*, carrying the **soft-borders caveat** (borders help but do not enforce within one run — inherits the tiered-reliability answer); (ii) the middleware half is the *genuinely-new* part, bifurcating into **runtime-provenance** (formalize the harmony report) vs **authoring-changelog**. Which refined form left open for Sensemaking/Decomposition.
+
+### Step 3 — Anchor vs prior round (material-change judgment) → FIXPOINT, round 0
+Did the anchor move to a **materially different territory** than surfacing fetched? **No.** Surfacing already covered the whole SKILL structure (SKILL.md Step 2/Step 5, harmony_layer's 3-Pass/Tier/hard-constraints/harmony-report, the config-core file split, schemas/PipelineConfig, the ~80 principles) + the prior chain. The warm pass **concretized** the anchor (named the latent-staging, the Step-5 collapse point, the harmony-report seed, the redundancy, the soft-borders) but did **not relocate** it to un-fetched territory. **Fixpoint at round 0 — 0 re-surfaces.** Loop terminates; proceed. (No fetch.)
+
+### Step 4 — On-trigger re-runs
+- **MQ4 (boundary) — RE-RUN (moved).** Surfacing sharpens/adds exclusions: (i) the **"still one run"** exclusion is confirmed load-bearing AND newly-consequential — it is *why* borders are soft (DF6); (ii) **"structure-not-content"** sharpens — staging re-orders/wires *existing* principles, it does not add them; (iii) NEW exclusion — since the staging half ≈ the prior fix, this inquiry should **EXCLUDE re-deriving the 3-Pass wiring itself** (that is prior `2026-07-11_00-24`'s job) and focus on the **DELTA** (generalize-to-all-layers + the middleware). Added to the NOT-list.
+- **MQ1 (verdict) — RE-RUN (moved).** The "evaluation" sub-axis gains a sharper shape: the evaluation must **separately** judge (a) the **staging half** (largely redundant with the prior fix — is generalizing-to-all-layers worth it?) and (b) the **middleware half** (genuinely new — runtime vs authoring, worth the cost?). The verdict is no longer "is staging good?" flatly but **"which PARTS earn their keep, given how much is already latent/redundant?"**
+- **MQ3 (intent, WHAT) — RE-RUN (moved).** "make-implicit-order-explicit" sharpens — the order is **already written** (the 3-Pass); the real endpoint is **WIRE-the-latent-order into Step 5 + SEPARATE-the-collapsed-layers**, not invent an order. "gain-visibility" sharpens to **formalize the latent harmony report** (runtime) or **add a SKILL changelog** (authoring).
+- **MultiDepth-WHY — NOT re-run (not moved).** Motivations (correctness / visibility / maintainability / auditability) unchanged; surfacing *confirmed* which are load-bearing (correctness-via-enforcement is what the soft-borders finding stress-tests; visibility/auditability is what the middleware serves) but added/removed none. Carried.
+- **MQA — RE-RUN (≥2 re-ran: MQ4, MQ1, MQ3).**
+  - *Joint axis 1 (TARGET-of-staging: runtime vs authoring)* → **reconcile:** for the STAGING half the fork largely **DISSOLVES** — the SKILL's `.md` structure *is* the runtime instruction, so "restructure the files into ordered bordered stages" and "the model executes ordered stages in one pass" are **one move**. The runtime/authoring distinction **REMAINS only for the MIDDLEWARE half** (runtime-provenance vs authoring-changelog are genuinely different artifacts).
+  - *Joint axis 2 (middleware meaning)* → **surface (irreducible):** runtime-provenance (formalize the harmony report) vs authoring-changelog stay distinct; Sensemaking resolves which earns its keep (or both).
+
+### Step 5 — Conflict-detection (warm-only) — **content-conflict, NON-SEVERE (MED-FLAG)**
+**Identified (not adjudicated):** the request's premise assumes (i) explicit staging is a **fresh** structural addition and (ii) the middleware files are a **new** visibility mechanism. Surfaced reality shows the staging is **~half-latent already** (the 3-Pass is written, just un-wired) and **heavily overlaps the prior fix** (DF5), and the middleware has a **latent seed** (the harmony report, DF4). Plus a soundness wrinkle: **"still one run" makes textual borders SOFT** — naming a stage does not enforce it (DF6).
+
+**Grading (not a ruling): NON-SEVERE.** The user's core instinct is **affirmed by surfaced reality** — explicit staging IS sound and the SKILL is **literally half-way there** (the 3-Pass exists, un-wired); the visibility idea has a real seed. What is refined is the **FORM** (finish-the-wiring + generalize + add-the-new-middleware, not from-scratch) and a **caveat is carried** (soft borders help but do not enforce within one run; inherits tiered-reliability). Resolvable by **re-anchoring**; no blocking clarifying-question required. Same **non-severe shape** as the prior inquiries (right instinct / refined form). Emit `content-conflict` (MED-FLAG); runner proceeds.
+
+### Step 6 — Rephrase re-fired (settled anchor; concrete SKILL vocabulary)
+1. **Wire-and-separate (staging, minimal):** Evaluate WIRING the already-latent 3-Pass + SEPARATING the collapsed layers into an explicit ordered staged Step 5 (comprehend → generate → check), carrying the soft-borders caveat — and design that staged Step 5.
+2. **Generalize-the-wiring (staging, full):** Evaluate GENERALIZING the prior 3-Pass wiring beyond harmony to ALL layers (config-stage / comprehension-stage / harmony-generate-stage / check-stage), and design the stage set + order.
+3. **Middleware as runtime-provenance:** Evaluate formalizing the latent harmony report into a per-stage "what each rule/policy did to this text" trace — worth the cost? how?
+4. **Middleware as authoring-changelog:** Evaluate per-SKILL-edit records of what rule/policy changed and why — worth it? how?
+5. **Joint (gated reach):** Evaluate staging (≈ finish + generalize the prior fix) and middleware (genuinely-new) SEPARATELY for earns-its-keep, design the survivors, carry the soft-borders caveat — reach-gated.
+
+### Step 7 — Carried unchanged
+Itemize (count = 1); Deconstruct (deliverable = evaluation + gated design; the reach gradient; one-run; structure-not-content); MultiDepth-literal (the verbatim restatement). The warm pass did not re-open the item count or the deliverable-shape — though the late-split (staging vs middleware) is now sharper (they have different redundancy-with-priors and different cost; Decomposition to resolve).
+
+### Step 8 — No adjudication
+Committed the **anchor** (the SKILL's latent-staging + collapsed-layers + harmony-report-seed reality + soft-borders + redundancy-with-prior). Kept the **span open:** which ordering axis is "the stage" axis; runtime-provenance vs authoring-changelog middleware; how much the generalize-to-all-layers earns beyond the prior fix; whether soft borders are "enough." Sensemaking / Innovation / Critique resolve which refined form.
+
+---
+
+## Self-Assessment
+
+**Verdict: MED-FLAG.** One content-conflict fired (non-severe) — the framing is sound and the user's instinct is affirmed (staging is genuinely sound and the SKILL is half-way there; the middleware has a real seed), but it carries refinement flags the downstream must resolve: the staging half is largely the prior fix finished-and-generalized (redundancy pressure, DF5), the middleware half is the genuinely-new part (bifurcated runtime-vs-authoring), and the **soft-borders caveat** (one-run textual borders help but do not enforce; DF6) must be carried into the soundness verdict. No LAYER 1 operational modes fired. Loop settled at FIXPOINT round 0 (0 re-surfaces).
+
+**`content-conflict` flag:** severity **non-severe (MED-FLAG)**; payload = no blocking question (resolvable by re-anchoring). Locus-refinement, not premise-refutation: explicit staging + a visibility layer is a real and sound direction (the SKILL is already half-way); the proposed FORM (from-scratch, borders-enforce) is what needs refining.
