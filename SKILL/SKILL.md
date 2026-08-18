@@ -28,10 +28,11 @@ Before doing anything else, read the following files in full:
 - `SKILL/references/config/schemas.py` — the authoritative schemas (`TranslationConfig` + Policy classes + `PipelineConfig`).
 - `SKILL/references/config/config_base_source.md` — the calibration context for the 8 `TranslationConfig` axes (per-level definitions; cross-cultural examples; cross-axis interactions; modulation tables).
 - `SKILL/references/config/policy_config_base_source.md` — the calibration context for the Policy layer (per-edge-case enums for recurring authorial value judgments).
-- `SKILL/references/core/translation_principals.md` — the project's translation principles.
+- `SKILL/references/core/translation_method.md` — **the governing translation method**: the ordered passes (config-blind Meaning-Lock → Harmony Map → Target Reconstruction → Verification) that Step 5 runs as its spine.
+- `SKILL/references/core/case_catalog.md` — the project's catalog of translation cases (niche meaning-carrying patterns to watch for).
 - `SKILL/references/core/advanced_principles.md` — advanced translation principles.
 - `SKILL/references/core/harmony_layer.md` — the harmony-layer specification (cause-effect chains, istilzam chains, Tier 1-4 preservation policies).
-- `SKILL/references/core/notes.md` — project notes.
+
 
 Then read the source document the user pointed to in Step 1.
 
@@ -70,14 +71,18 @@ Before producing the translation, send one short line:
 
 > *"Translation will be produced in Markdown format."*
 
-Then produce the translation. Apply:
+Then produce the translation by running the four-pass method in `references/core/translation_method.md`, in order. Do not collapse the passes into one motion; do not concrete the translation until Pass 3.
 
-- The user's `TranslationConfig` choices (per `config_base_source.md` calibration). This matters because it effects what words are usable in the target language and which are not usable . 
-- Default Policy values from `schemas.py` (or the user's overrides if `with policies` was requested; per `policy_config_base_source.md` calibration).
-- Use The translation principles from `references/core/translation_principals.md` and `references/core/advanced_principles.md`. These are translation rule of thumbs for specific niche but important cases. If any souce material resembles any of these principles you should pay extra attention using translation. 
+1. **Pass 1 — Meaning Lock (config-blind).** Render each sentence with strict semantic fidelity **without the `TranslationConfig` in view** — nothing added, removed, or altered. This is the "accurate but choppy" foundation. Running it config-blind is deliberate: if the reader-style settings are visible here, they distort what you *understand* the source to mean. Do not concrete yet.
 
-- The harmony-layer Tier 1-4 preservation policy from `references/core/harmony_layer.md` (Tier 1-2 are NON-NEGOTIABLE hard constraints regardless of other config choices).
-- Any project notes from `references/core/notes.md`.
+2. **Pass 2 — Harmony Map.** Analyze the source's inter-sentence relationships (phonetic echo, parallelism, chiasmus, escalation/de-escalation, contrast pairs, implied question-answer flow) — the "harmony blueprint." Consult `references/core/harmony_layer.md` for the Tier 1–4 preservation policy (which relationships must be preserved vs. are sacrificeable). Do not concrete yet.
+
+3. **Pass 3 — Target Reconstruction.** Now — and only now — reconstruct in the target language on top of the locked meaning, applying: the user's `TranslationConfig` choices (per `config_base_source.md`), which decide what words/registers are usable for this reader; the Policy values (per `policy_config_base_source.md`) if `with policies` was requested; the niche cases in `references/core/case_catalog.md` (if the source resembles any, translate it with extra care); and the Pass-2 harmony blueprint. You may change *how* a meaning is expressed, never *what*. **You may concrete the translation now.**
+
+4. **Pass 4 — Whole-draft Verification (config-independent).** After the full draft, re-read the whole translation against the source: was any content dropped? invented? were sentence boundaries preserved? did the large-scale structure survive? Fix any failure before delivering.
+
+(The full method — the hard constraints, the config-blindness rationale, and the chunking front/middle/back bracket — is in `references/core/translation_method.md`.)
+
 
 The output is Markdown. Use Markdown's footnote syntax for any policy value that calls for footnotes (`SourceApparatusPolicy.translate-as-footnote`; `NonMainLangPartsPolicy.preserve-original-and-add-translation-as-a-note`; etc.). Use blockquotes for embedded poetry under `EmbeddedPoetryPolicy.preserve-original-with-prose-gloss`. Use italics for voice-marking under `VoiceMarkingPolicy.implicit-typographic`.
 
@@ -96,3 +101,11 @@ The output is Markdown. Use Markdown's footnote syntax for any policy value that
 5. **Tier 1-2 harmony-layer preservation is non-negotiable.** Regardless of the user's TC choices, the harmony-layer Tier 1 (cause-effect chains, istilzam chains, etc.) and Tier 2 (high-priority chains) are preserved per `references/core/harmony_layer.md`.
 
 6. **Echo the resolved config.** After Step 4, briefly tell the user what TC values you committed to. This lets them catch a misunderstood preference before the translation starts.
+
+7. **Chunking is NEccesary due to AI focus limit** 
+     AI loses its attention to details and accurate translation when asked to do all at once for one long text This is why we need to process texts in chunks..
+     For Claude Opus 4.8 use chunks of Max ~5000 character (if there is sentence ending or paragrapgh ending you can strecth this up or down of course, it is not strict rule but approximation )
+     For Claude Sonet use Max ~2500
+     For Fable 5, use max ~7000 char
+
+8.  Make sure when You receive a source text inspect it in terms of lenght (chars,words) and based on model being used pring how many chunks will be used to the user. 

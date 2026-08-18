@@ -1,20 +1,6 @@
 Harmony Preservation Layer:
 
-The idea is to create a translation mode that works in three passes:
-
-Pass 1 — Meaning Lock: Translate every sentence with strict semantic fidelity. No meaning added, removed, or altered. This produces the "accurate but choppy" version. This is the foundation that cannot be violated.
-
-Pass 2 — Harmony Map: Analyze the original text's inter-sentence relationships and classify each connection by type. For example: phonetic echo between sentence endings, grammatical parallelism, shared root words creating cohesion, chiastic (mirror) structure, escalation/de-escalation rhythm, contrast pairing, implied question-answer flow. This map becomes the "harmony blueprint."
-
-Pass 3 — Target Language Reconstruction: Using the harmony blueprint, adjust the Pass 1 translation using ONLY the target language's native connective tools to recreate equivalent relationships. The strict rule is: you may change HOW a meaning is expressed, but never WHAT meaning is expressed. You may reorder clauses within a sentence (if the target language allows it without meaning change), choose between synonyms based on phonetic fit, adjust sentence length for rhythm, and use the target language's natural cohesion devices.
-
-The hard constraints would be:
-
-Anything that changes semantic content is forbidden. Adding information not present in the original is forbidden. Removing information present in the original is forbidden. Merging two sentences into one is forbidden (because sentence boundaries are structural meaning). Splitting one sentence into two is forbidden for the same reason. Changing the logical relationship between sentences (cause→effect becoming effect→cause) is forbidden.
-
-What IS permitted:
-
-Choosing between synonyms to create phonetic harmony in the target language. Adjusting word order within a sentence where the target language grammar allows multiple valid orders. Using the target language's natural transitional devices (provided they don't add meaning). Matching sentence length ratios — if the original has a short sentence followed by a long one, maintaining that ratio. Preserving parallelism by restructuring the target language's grammar to echo itself where the original echoed itself.
+This file is the harmony layer's **preservation policy** — which inter-sentence relationships must be preserved, which are sacrificeable, and under what conditions. It is what Pass 2 (Harmony Map) and Pass 3 (Target Reconstruction) consult. The translation method itself — the ordered passes, the config-blind Meaning-Lock, and the hard constraints — lives in `translation_method.md`.
 
 
 
